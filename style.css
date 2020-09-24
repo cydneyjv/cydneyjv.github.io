@@ -1,3 +1,5 @@
+
+/* added background color and stripes */
 html {
     color: "#F0EFEB";
     background-image: 
@@ -15,11 +17,13 @@ html {
     display: inline;
 }
 
+/* added font and light brown color */
 * {
 	font-family: Oswald, sans-serif;
 	color: rgba(177, 131, 119, 1);
 }
 
+/* heading designs */
 h1 {
 	font-family: Oswald, sans-serif;
 	text-align: center;
@@ -36,6 +40,7 @@ h5 {
 	border-radius: 12px;
 }
 
+/* to make lists horizontal */
 ul {
   list-style-type: none;
   text-align: center;
@@ -55,11 +60,12 @@ li, i {
 	padding-right: 40%
 }
 
+/* added class for dark brown text */
 .dark{
 	color: rgba(127, 86, 40, 1);
 }
 
-
+/* for grid */
 .column {
   float: left;
   width: 33%;
@@ -85,6 +91,7 @@ li, i {
   text-align: center;
 }
 
+/* for dropdown box */
 select {
 	background-color: transparent;
 	border-color: rgba(177, 131, 119, 1);
@@ -100,11 +107,13 @@ label {
 	text-align: center;
 }
 
+/* for radio buttons */
 form {
 	margin-top: 20px;
 	margin-right: 40px;
 }
 
+/* for add to cart button */
 button {
 	margin-right: 40px;
 	background-color: rgba(177, 131, 119, 1);
