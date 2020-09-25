@@ -1,7 +1,7 @@
 
 /* added background color and stripes */
 html {
-    color: "#F0EFEB";
+    color: rgba(240, 239, 235, 1);
     background-image: 
     linear-gradient(
     	90deg, 
