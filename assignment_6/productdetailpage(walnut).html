@@ -18,7 +18,12 @@
 
 <ul>
   <li style="float:left"><a href="home.html">Home</a></li>
-  <li style="float:right"> <i class='fas fa-shopping-cart' style='font-size:24px;color:rgba(177, 131, 119, 1)'></i></li>
+  <li style="float:right"><a href="shoppingcart.html">
+    <span class="fa-stack fa-3x">
+      <i class="fas fa-shopping-cart fa-stack-2x" style="font-size:30px;float:right" id = "scb"></i>
+      <strong id = "sc#" class="fa-stack-1x shopping-cart-text fa-inverse" style="font-size:13px;float:right;margin-top: -38px; margin-left: 2px"> </strong>
+    </span>
+  </a></li>
 </ul>
 <br>
 <ul>
@@ -41,7 +46,7 @@
   	<h4 style="margin-bottom: -30px;margin-top: -10px;margin-right: 40px">Walnut Cinnamon Roll</h4>
   	<h4 style="color:rgba(177, 131, 119, 1);margin-bottom: -30px;margin-right: 40px">$3.49</h4>
   	<h6 style="color:rgba(106, 44, 22, 1);margin-right: 40px">Do you go nutty for nuts? We do too! Adding walnuts to our already famous cinnamon rolls adds a touch of crunch and a richer flavor that we think you'll love!</h6>
-  	<h4 style="margin-bottom: -10px;margin-right: 40px">Quantity</h4>
+  	<h4 style="margin-top: -20px; margin-bottom: -10px;margin-right: 40px">Quantity</h4>
   	<select style="margin-right: 30px">
    	 	<option value="1">1</option>
    	 	<option value="2">2</option>
@@ -71,7 +76,7 @@
   </div>
   <div class="grid-item">
   	<!-- item 4: glazing + dropdown, pickup and delivery radio buttons -->
-  	<h4 style="margin-bottom: -10px;margin-top: -20px;margin-right: 40px">Glazing</h4>
+  	<h4 style="margin-bottom: -10px;margin-top: -80px;margin-right: 40px">Glazing</h4>
   	<select style="margin-right: 30px">
    	 	<option value="no">No Glaze</option>
    	 	<option value="sm">Sugar Milk Glaze</option>
@@ -146,7 +151,7 @@
   </div>
   <div class="grid-item">
   	<!-- item 6: add to cart button -->
-  	<button type="button">Add To Cart</button>
+  	<button type="button" onclick="choosequantity()" id = "atc">Add To Cart</button>
   </div>
 </div>
 
