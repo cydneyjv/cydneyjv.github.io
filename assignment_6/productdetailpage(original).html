@@ -44,7 +44,7 @@
   </div>
   <div class="grid-item">
   	<!-- item 2: name, price, description, quantity + dropdown box + note about selecting -->
-  	<h4 style="margin-bottom: -30px;margin-top: -10px;margin-right: 40px">Famous Cinnamon Roll (Our #1 Best Seller!)</h4>
+  	<h4 id = "wltitle" style="margin-bottom: -30px;margin-top: -10px;margin-right: 40px">Famous Cinnamon Roll (Our #1 Best Seller!)</h4>
   	<h4 style="color:rgba(177, 131, 119, 1);margin-bottom: -30px;margin-right: 40px">$2.49</h4>
   	<h6 style="color:rgba(106, 44, 22, 1);margin-right: 40px">Our world famous cinnamon roll! Made fresh daily using grandpa’s recipe! You need to try this one. It will blow your mind and leave you coming back for more!</h6>
   	<h4 style="margin-top: -20px; margin-bottom: -10px;margin-right: 40px">Quantity</h4>
@@ -155,7 +155,15 @@
   <div class="grid-item" style = "margin-top: -100px">
   	<!-- item 6: add to cart button -->
   	<button type="button" onclick="choosequantity()" id = "atc">Add To Cart</button>
-    <h6 style="margin-left: -10px;font-size: 24px;margin-bottom: -30px">Explore our other tasty options:</h6>
+    <ul>
+      <li style="display: inline-grid">
+        <h4 onclick = "wishlist()" id = "atw" style = "margin-left: -30px;font-weight: normal;font-size:24px;text-decoration: underline">Add to Wishlist</h4>
+      </li>
+      <li style="display: inline-grid">
+        <h4><a href="shoppingcart.html"> > </a></h4>
+      </li>
+    </ul>
+    <h6 style="margin-left: -20px;font-size: 24px;margin-bottom: -30px;margin-top: -10px">Explore our other tasty options:</h6>
     <ul style="margin-top: 50px;margin-left: -10px">
       <li><i onclick = "back()" class='fas fa-angle-left' style='font-size:36px; color:rgba(177, 131, 119, 1)'></i></li>
       <li style="margin-left: 25px">

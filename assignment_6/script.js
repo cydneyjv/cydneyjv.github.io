@@ -26,7 +26,7 @@ function chooseglaze() {
 	}
 }
 
-var q = 0
+var q = 0;
 
 function choosequantity(){
 	q=parseInt(q)+parseInt(1);
@@ -41,7 +41,7 @@ function choosequantity(){
 	}
 }
 
-i = 0
+i = 0;
 
 function back(){
 	i=parseInt(i)-parseInt(1);
@@ -222,4 +222,16 @@ function forward(){
 		document.getElementById("cdes3").style = "margin-left:5px;font-weight:normal";
 		i=0;
 	}
+}
+
+var wish_list = [];
+
+var p = "";
+ 
+function wishlist(){
+ p = String(document.getElementById("wltitle")) + String(document.getElementById("ogquant")) + String(document.getElementById("ogglaze"));
+ wish_list.push(p);
+ document.getElementById("atw").innerHTML = "Add to Wishlist ("+ wish_list.length + ")";
+ alert("Product added to wishlist!");
+ p = "";
 }
