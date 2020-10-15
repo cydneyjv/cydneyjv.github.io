@@ -6,30 +6,29 @@
     <!-- same links -->
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="script.js"></script>
-    <title>Original</title>
+    <title>Walnut</title>
 </head>
 <body>
 	<!-- same header + nav bar -->
-<ul id = "title">
-	<li style="padding-right: 10px"><i class='fas fa-bread-slice' style='font-size:12px;color:rgba(177, 131, 119, 1)'></i></li>
-	<li style="padding-right: 10px"><h1>Bun Bun Bake Shop!</h1></li>
-	<li><i class='fas fa-bread-slice' style='font-size:12px;color:rgba(177, 131, 119, 1)'></i></li>
+<ul id = "title" style="margin-left: 25px">
+  <li style="padding-right: 10px"><i class='fas fa-bread-slice' style='font-size:12px;color:rgba(177, 131, 119, 1)'></i></li>
+  <li style="text-align: center;"><h1>Bun Bun<br>Bake Shop!</h1></li>
+  <li style="padding-left: 10px"><i class='fas fa-bread-slice' style='font-size:12px;color:rgba(177, 131, 119, 1)'></i></li>
 </ul>
 
 <ul>
   <li style="float:left"><a href="home.html">Home</a></li>
   <li style="float:right"><a href="shoppingcart.html">
-    <span  class="fa-stack fa-3x">
+    <span class="fa-stack fa-3x">
       <i class="fas fa-shopping-cart fa-stack-2x" style="font-size:30px;float:right" id = "scb"></i>
-      <strong id = "sc#" class="fa-stack-1x shopping-cart-text fa-inverse" style="font-size:13px;float:right;margin-top: -38px; margin-left: 2px">0</strong>
+      <strong id = "sc#" class="fa-stack-1x shopping-cart-text fa-inverse" style="font-size:13px;float:right;margin-top: -38px; margin-left: 2px"> </strong>
     </span>
   </a></li>
 </ul>
 <br>
 <ul>
-  <li style="padding-right: 20%"><a href="productbrowsingpage.html">Our Products</a></li>
-  <li style="padding-right: 20%">Our Story</li>
+  <li style="padding-right: 28%"><a href="productbrowsingpage.html">Our Products</a></li>
+  <li style="padding-right: 28%">Our Story</li>
   <li>Our Locations</li>
 </ul>
 <br>
@@ -40,17 +39,16 @@
 <div class="grid-container">
 	<!-- item 1: large detail image -->
   <div class="grid-item">
-  	<img id = "oglarge" src = "images/pears.jpeg" width = 600 alt = "large original">
+  	<img src = "images/green.jpeg" width = 600 alt = "large walnut">
   </div>
   <div class="grid-item">
   	<!-- item 2: name, price, description, quantity + dropdown box + note about selecting -->
-  	<h4 id = "wltitle" style="margin-bottom: -30px;margin-top: -10px;margin-right: 40px">Famous Cinnamon Roll (Our #1 Best Seller!)</h4>
-  	<h4 style="color:rgba(177, 131, 119, 1);margin-bottom: -30px;margin-right: 40px">$2.49</h4>
-  	<h6 style="color:rgba(106, 44, 22, 1);margin-right: 40px">Our world famous cinnamon roll! Made fresh daily using grandpa’s recipe! You need to try this one. It will blow your mind and leave you coming back for more!</h6>
+  	<h4 style="margin-bottom: -30px;margin-top: -10px;margin-right: 40px">Walnut Cinnamon Roll</h4>
+  	<h4 style="color:rgba(177, 131, 119, 1);margin-bottom: -30px;margin-right: 40px">$3.49</h4>
+  	<h6 style="color:rgba(106, 44, 22, 1);margin-right: 40px">Do you go nutty for nuts? We do too! Adding walnuts to our already famous cinnamon rolls adds a touch of crunch and a richer flavor that we think you'll love!</h6>
   	<h4 style="margin-top: -20px; margin-bottom: -10px;margin-right: 40px">Quantity</h4>
-  	<select style="margin-right: 30px" id = "ogquant">
-   	 	<option value="none" selected disabled hidden>Select your quantity</option>
-      <option value="1">1</option>
+  	<select style="margin-right: 30px">
+   	 	<option value="1">1</option>
    	 	<option value="2">2</option>
    		<option value="3">3</option>
    		<option value="4">4</option>
@@ -70,17 +68,16 @@
   	<!-- item 3: 3 detail images with arrows indicating more on either side, couldn't figure out how to center the arrows vertically, deviation from original design -->
   	<ul>
   		<li><i class='fas fa-angle-left' style='font-size:36px; color:rgba(177, 131, 119, 1)'></i></li>
-  		<li><img id = "og1" src = "images/checker.jpeg" width = 180 alt = "detail 1 original"></li>
-  		<li><img id = "og2" src = "images/bite.jpeg" width = 180 alt = "detail 2 original"></li>
-  		<li><img id = "og3" src = "images/glaze.jpeg" width = 180 alt = "detail 3 original"></li>
+  		<li><img src = "images/wal.jpeg" width = 180 alt = "detail 1 walnut"></li>
+  		<li><img src = "images/walcuts.jpeg" width = 180 alt = "detail 2 walnut"></li>
+  		<li><img src = "images/walnut.jpeg" width = 180 alt = "detail 3 walnut"></li>
   		<li><i class='fas fa-angle-right' style='font-size:36px;color:rgba(177, 131, 119, 1)'></i></li>
   	</ul>
   </div>
   <div class="grid-item">
   	<!-- item 4: glazing + dropdown, pickup and delivery radio buttons -->
   	<h4 style="margin-bottom: -10px;margin-top: -80px;margin-right: 40px">Glazing</h4>
-  	<select style="margin-right: 30px" id = "ogglaze" onchange="chooseglaze()">
-      <option value="none" selected disabled hidden>Select your glaze</option>
+  	<select style="margin-right: 30px">
    	 	<option value="no">No Glaze</option>
    	 	<option value="sm">Sugar Milk Glaze</option>
    		<option value="vm">Vanilla Milk Glaze</option>
@@ -101,7 +98,7 @@
   	<ul style="margin-left: 20px">
   		<li>
   			<!-- line design -->
-  			<hr style=";border-width:1px; color:rgba(177, 131, 119, 1);background-color:rgba(177, 131, 119, 1)">
+  			<hr style=";border-width:1px;color:rgba(177, 131, 119, 1);background-color:rgba(177, 131, 119, 1)">
   		</li>
   		<li>
   			<ul>
@@ -152,41 +149,9 @@
 
   	</ul>
   </div>
-  <div class="grid-item" style = "margin-top: -100px">
+  <div class="grid-item">
   	<!-- item 6: add to cart button -->
   	<button type="button" onclick="choosequantity()" id = "atc">Add To Cart</button>
-    <ul>
-      <li style="display: inline-grid">
-        <h4 onclick = "wishlist()" id = "atw" style = "margin-left: -30px;font-weight: normal;font-size:24px;text-decoration: underline">Add to Wishlist</h4>
-      </li>
-      <li style="display: inline-grid">
-        <h4><a href="shoppingcart.html"> > </a></h4>
-      </li>
-    </ul>
-    <h6 style="margin-left: -20px;font-size: 24px;margin-bottom: -30px;margin-top: -10px">Explore our other tasty options:</h6>
-    <ul style="margin-top: 50px;margin-left: -10px">
-      <li><i onclick = "back()" class='fas fa-angle-left' style='font-size:36px; color:rgba(177, 131, 119, 1)'></i></li>
-      <li style="margin-left: 25px">
-        <img id = "cimg1" src = "images/gf.jpeg" width = 150 alt = "carousel 1 gluten-free">
-      </li>
-      <li style="margin-left: 25px">
-        <img id = "cimg2" src = "images/b.jpeg" width = 150 alt = "carousel 2 blackberry">
-      </li>
-      <li style="margin-left: 25px">
-        <img id = "cimg3" src = "images/walnut.jpeg" width = 150 alt = "carousel 3 walnut"></li>
-      <li style="margin-left: 25px"><i onclick = "forward()" class='fas fa-angle-right' style='font-size:36px;color:rgba(177, 131, 119, 1)'></i></li>
-    </ul>
-    <ul style="margin-right: 50px;margin-top: -40px">
-      <li style="display: inline-grid;"><h6 id = "clab1" class = "dark">Original (G-F)</h6></li>
-      <li style="display: inline-grid;margin-left: 85px;margin-right: 42px"><h6 id = "clab2" class = "dark">Blackberry</h6></li>
-      <li style="display: inline-grid;margin-left: 65px;margin-right: -10px"><h6 id = "clab3" class = "dark">Walnut</h6></li>
-    </ul>
-    <ul style="margin-right: 70px;margin-top: -80px">
-      <li style="display: inline-grid;margin-left: 45px"><h6 id = "cdes1" style="font-size: 20px;font-weight:normal">Our signature best seller,<br>without all the gluten!</h6></li>
-      <li style="display: inline-grid;margin-left: 10px"><h6 id = "cdes2" style="font-size: 20px;font-weight:normal">A fun, fruity flavor that<br>kids and adults love!</h6></li>
-      <li style="display: inline-grid;margin-left: 10px"><h6 id = "cdes3" style="font-size: 20px;font-weight:normal">People go nutty over<br>our walnut flavor!</h6></li>
-    </ul>
-  </div>
   </div>
 </div>
 
