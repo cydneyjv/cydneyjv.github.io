@@ -308,6 +308,6 @@ function wishlist(){
  let localStorage = window.localStorage;
  let arr = JSON.parse(localStorage.getItem("arr"));
  if (!arr) arr = [];
- arr.push(String(item.display()));
+ arr.push(Iname);
  localStorage.setItem("arr", JSON.stringify(arr));
 }

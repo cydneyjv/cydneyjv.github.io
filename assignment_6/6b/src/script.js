@@ -245,7 +245,7 @@ class Item {
 	}
 	
 	display() {
-		return (this.quantity + '  ' + this.name + ' Glaze: ' + this.glaze + '<br />')
+		return ('<br />' + this.quantity + '  ' + this.name + ' Glaze: ' + this.glaze)
 	}
 }
 
@@ -261,14 +261,14 @@ class wish {
 		var itemInItems = false
 		for(var i = 0; i < this.items.length; i++) {
 			if (this.items[i].name == item.name && this.items[i].glaze == item.glaze) {
-				itemInItems = true
-				alert("This item is already in the wishlist!")
+				itemInItems = true;
+				alert("This item is already in the wishlist!");
 			}
 		}
 		
 		if (!itemInItems) { 
-			this.items.push(item) 
-			alert("This item has been added to the wishlist!")
+			this.items.push(item);
+			alert("This item has been added to the wishlist!");
 		}
 	}
 	
@@ -285,7 +285,7 @@ class wish {
 
 wish_list = new wish();
 
-function wishlist(){
+function wishlist() {
 	// get quantity, glaze, and name of bun
  let val = document.getElementById("ogquant").value;
  if (val == "none"){
@@ -295,19 +295,31 @@ function wishlist(){
  if (gla == "none"){
  	gla = 'not selected'
  }
+ if (gla == "no"){
+ 	gla = 'no glaze'
+ }
+ if (gla == "dc"){
+ 	gla = 'double chocolate'
+ }
+ if (gla == "vm"){
+ 	gla = 'vanilla milk'
+ }
+ if (gla == "sm"){
+ 	gla = "sugar milk"
+ }
  let Iname = document.getElementById("wltitle").innerHTML;
 
- let wlitem = val + Iname + gla;
  item = new Item(Iname,gla,val);
  wish_list.addItem(item);
-
-// wishlist counter
- document.getElementById("atw").innerHTML = "Add to Wishlist ("+ wish_list.items.length + ")";
 
 // add to local storage
  let localStorage = window.localStorage;
  let arr = JSON.parse(localStorage.getItem("arr"));
  if (!arr) arr = [];
- arr.push(String(item.display()));
+ arr.push(item.display());
+ arr = [...new Set(arr)];
  localStorage.setItem("arr", JSON.stringify(arr));
+
+ // wishlist counter
+ document.getElementById("atw").innerHTML = "Add to Wishlist ("+ arr.length + ")";
 }
