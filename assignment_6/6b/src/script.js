@@ -1,5 +1,5 @@
 
-// connected to productdetailpage(original).html
+// connected to productdetailpage(original).html and productbrowsingpage.html
 
 //changing images as you change the chosen glaze
 function chooseglaze() {
@@ -34,6 +34,9 @@ let q = 0;
 
 //change "add to cart" button and shopping cart icon as you press so it changes color (light or dark) and adds a counter to show how many items in cart (on the top right corner in the cart icon)
 function choosequantity(){
+	let cart = JSON.parse(localStorage.getItem("cart"));
+	if (!cart) cart = [];
+	q = cart.length;
 	q=parseInt(q)+parseInt(1);
 	document.getElementById("sc#").innerHTML = q;
 	if ((q & 1) == 0 ) {
@@ -44,6 +47,7 @@ function choosequantity(){
 		document.getElementById("atc").style.background = "rgba(127, 86, 40, 1)";
 	    document.getElementById("scb").style.color = "rgba(127, 86, 40, 1)";
 	}
+	alert("Added to Cart!" + ' (' + cart.length + ')');
 }
 
 i = 0;
@@ -322,4 +326,171 @@ function wishlist() {
 
  // wishlist counter
  document.getElementById("atw").innerHTML = "Add to Wishlist ("+ arr.length + ")";
+}
+
+function addonef() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ let name = "Famous Original Cinnamon Roll(s)";
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function addoneb() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ let name = "Blackberry Cinnamon Roll(s)";
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function addonew() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ let name = "Walnut Cinnamon Roll(s)";
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function addoneo() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ let name = "Original (Gluten-Free) Cinnamon Roll(s)";
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function addonep() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ let name = "Pumpkin Spice Cinnamon Roll(s)";
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function addonec() {
+ let localStorage = window.localStorage;
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ let quantity = "1";
+ let glaze = 'No Glaze';
+ if (!cart) cart = [];
+ let name = "Caramel Pecan Cinnamon Roll(s)";
+ cart.push(name);
+  alert("Added to Cart!" + ' (' + cart.length + ')');
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+}
+
+function add1o(){
+ let localStorage = window.localStorage;
+ let name = "Famous Original Cinnamon Roll(s)";
+ let quantity = document.getElementById("ogquant").value;
+ if (quantity == "none"){
+ 	quantity = "1";
+ }
+ let glaze = document.getElementById("ogglaze").value;
+ if (glaze == "none"){
+ 	glaze = 'No Glaze'
+ }
+  if (glaze == "no"){
+ 	glaze = 'No Glaze'
+ }
+ if (glaze == "dc"){
+ 	glaze = 'Double Chocolate'
+ }
+ if (glaze == "vm"){
+ 	glaze = 'Vanilla Milk'
+ }
+ if (glaze == "sm"){
+ 	glaze = "Sugar Milk"
+ }
+ let cart = JSON.parse(localStorage.getItem("cart"));
+ if (!cart) cart = [];
+ cart.push(name);
+ localStorage.setItem("cart", JSON.stringify(cart));
+ let quant = JSON.parse(localStorage.getItem("quant"));
+ if (!quant) quant = [];
+ quant.push(quantity);
+ localStorage.setItem("quant", JSON.stringify(quant));
+ let glaz = JSON.parse(localStorage.getItem("glaz"));
+ if (!glaz) glaz = [];
+ glaz.push(glaze);
+ localStorage.setItem("glaz", JSON.stringify(glaz));
+ document.getElementById("sc#").innerHTML = cart.length;
+ if ((cart.length & 1) == 0 ) {
+		document.getElementById("atc").style.background = "rgba(177, 131, 119, 1)";
+	    document.getElementById("scb").style.color = "rgba(177, 131, 119, 1)";
+	}
+else {
+		document.getElementById("atc").style.background = "rgba(127, 86, 40, 1)";
+	    document.getElementById("scb").style.color = "rgba(127, 86, 40, 1)";
+	}
+alert("Added to Cart!" + ' (' + cart.length + ')');
 }

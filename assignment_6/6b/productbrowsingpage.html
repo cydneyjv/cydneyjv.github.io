@@ -6,6 +6,7 @@
     <!-- same links -->
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="src/script.js"></script>
     <title>Product Browsing Page</title>
 </head>
 <body>
@@ -18,7 +19,9 @@
 
 <ul>
   <li style="float:left"><a href="home.html">Home</a></li>
-  <li style="float:right"><a href="shoppingcart.html"><i class='fas fa-shopping-cart' style='font-size:30px;color:rgba(177, 131, 119, 1)'></i></a></li>
+  <li style="float:right"><a href="shoppingcart.html">
+    <i class='fas fa-shopping-cart' style='font-size:30px'></i></a>
+  </li>
 </ul>
 <br>
 <ul>
@@ -29,7 +32,7 @@
 
 <!-- start of new content! -->
 <h3 style="padding-right: 2%">~ Cinnamon Rolls ~</h3>
-<h4 style="padding-right: 1.9%">Average Price: $2.49</h4>
+<h4 style="padding-right: 1.9%">Price: $2.49</h4>
 <!-- fake checkboxes to filter -->
 <ul style="padding-right: 2%">
 	<li style="padding-right: 10px"><i class='far fa-square' style='font-size:12px;color:rgba(177, 131, 119, 1)'></i></li>
@@ -64,19 +67,19 @@
 
 <div class="row" style="padding-left: 18%">
 	<!-- first row of add to cart -->
-  <div class="column" style="width: 10%;margin-left: -30px;padding-right: 23%;height:70px">
-    <a href="productdetailpage(original).html"><h5>Add 1 to Cart</h5></a>
+  <div onclick = "addonef()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: -30px;padding-right: 23%;height:70px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
-  <div class="column" style="width: 10%;margin-left: 35px;padding-right: 24%;height:50px">
-    <h5>Add 1 to Cart</h5>
+  <div onclick = "addoneb()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: 35px;padding-right: 24%;height:50px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
-  <div class="column" style="width: 10%;margin-left: 35px;height:50px">
-    <a href="productdetailpage(walnut).html"><h5>Add 1 to Cart</h5></a>
+  <div onclick = "addonew()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: 35px;height:50px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
 </div>
 
 <!-- second row of images -->
-<ul>
+<ul style="margin-top: 20px">
 	<li style="padding-right: 100px"><a href="productdetailpage(g-f).html"><img src = "images/4.jpeg" width = 300 alt = "Gluten-Free cinnamon roll"></a></li>
 	<li style="padding-right: 100px"><img src = "images/5.jpeg" width = 300 alt = "pumpkin spice cinnamon roll"></li>
 	<li><img src = "images/6.jpeg" width = 300 alt = "caramel pecan cinnamon roll"></li>
@@ -96,14 +99,14 @@
 
 <div class="row" style="padding-left: 18%">
 	<!-- second row of add to cart -->
-  <div class="column" style="width: 10%;margin-left: -25px;padding-right: 23%;height:70px">
-    <a href="productdetailpage(g-f).html"><h5>Add 1 to Cart</h5></a>
+  <div onclick = "addoneo()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: -25px;padding-right: 23%;height:70px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
-  <div class="column" style="width: 10%;margin-left: 30px;padding-right: 24%;height:50px">
-    <h5>Add 1 to Cart</h5>
+  <div onclick = "addonep()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: 30px;padding-right: 24%;height:50px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
-  <div class="column" style="width: 10%;margin-left: 35px;height:50px">
-    <h5>Add 1 to Cart</h5>
+  <div onclick = "addonec()" onclick="choosequantity()" class="column" style="width: 10%;margin-left: 35px;height:50px">
+    <h5>Add 1 to Cart<br>(no glaze)</h5>
   </div>
 </div>
 
