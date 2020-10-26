@@ -313,7 +313,7 @@ class Item {
 	}
 	
 	display() {
-		return ('<br />' + this.quantity + '  ' + this.name + ' Glaze: ' + this.glaze)
+		return ('<br />' + this.quantity + '  ' + this.name + '-- Glaze: ' + this.glaze)
 	}
 }
 
