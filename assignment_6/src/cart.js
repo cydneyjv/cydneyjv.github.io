@@ -226,8 +226,33 @@ function trashing(clickedElement){
 	c3.removeChild(c3.childNodes[tid]);
 
 	let trashElements = document.querySelectorAll('.trash');
+    let quantityElements = document.querySelectorAll('.quantity');
+    let dozenElements = document.querySelectorAll('.hiddendozen');
+    let nameElements = document.querySelectorAll('.name');
+    let imageElements = document.querySelectorAll('.image');
+    let glazeElements = document.querySelectorAll('.glaze');
+    let priceElements = document.querySelectorAll('.price');
+    let saveElements = document.querySelectorAll('.hiddensave');
+
 	// Set their ids
 	for (var i = 0; i < trashElements.length; i++){
     	trashElements[i].id = 'sct' + i;
+        quantityElements[i].id = 'scq' + i;
+        dozenElements[i].id = 'schd' + i;
+        nameElements[i].id = 'scn' + i;
+        imageElements[i].id = 'sci' + i;
+        glazeElements[i].id = 'scg' + i;
+        priceElements[i].id = 'scp' + i;
+        saveElements[i].id = 'schs' + i;
 	}
+
+    let t = 0;
+    for (var k = 0; k < trashElements.length; k++){
+        console.log("scp"+k);
+        console.log(document.getElementById("scp"+k).innerHTML);
+        let newpr = document.getElementById("scp"+k).innerHTML;
+        t = Number(t) + Number(newpr.slice(1));
+    }
+// Calculate total price
+    document.getElementById("sctotal").innerHTML = '$' + t.toFixed(2);
 }

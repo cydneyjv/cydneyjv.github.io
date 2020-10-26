@@ -4,6 +4,7 @@
 function cartnum() {
 	let localStorage = window.localStorage;
  	let cart = JSON.parse(localStorage.getItem("cart"));
+ 	if (!cart) cart = [];
 	document.getElementById("sc#").innerHTML = cart.length;
 }
 
