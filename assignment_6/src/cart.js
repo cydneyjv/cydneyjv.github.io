@@ -1,7 +1,9 @@
+// get all arrays stored
 let cart = JSON.parse(window.localStorage.getItem("cart"));
 let quant = JSON.parse(window.localStorage.getItem("quant"));
 let glaz = JSON.parse(window.localStorage.getItem("glaz"));
 
+// get the HTML div's that store each array
 let c1 = document.getElementById("scpage1");
 let c2 = document.getElementById("scpage2");
 let c3 = document.getElementById("scpage3");
@@ -10,6 +12,7 @@ if (!cart) cart = [];
 if (!quant) quant = [];
 if (!glaz) glaz = [];
 
+// append a child for each item in the cart
 for(var i = 0; i < cart.length; i++) {
 var div1 = document.createElement('div');
 div1.setAttribute('class', 'seconditem');
@@ -25,6 +28,7 @@ c2.appendChild(div2);
 c3.appendChild(div3);
 }
 
+// set ID's for all quantity and "more than dozen" text boxes - for leftmost column
 let quantityElements = document.querySelectorAll('.quantity');
 let dozenElements = document.querySelectorAll('.hiddendozen');
 // Set their ids
@@ -46,6 +50,7 @@ for (var i = 0; i < lessElements.length; i++){
     	moreElements[i].id = 'scm' + i;
 	}
 
+// set ID's for all name and image and glaze text boxes - for middle column
 let nameElements = document.querySelectorAll('.name');
 // Set their ids
 for (var i = 0; i < nameElements.length; i++){
@@ -84,6 +89,7 @@ for (var i = 0; i < glazeElements.length; i++){
     	glazeElements[i].innerHTML = glaz[i];
 	}
 
+// set ID's for all price and "you saved $___" text boxes - for rightmost column
 let priceElements = document.querySelectorAll('.price');
 let saveElements = document.querySelectorAll('.hiddensave');
 let t = 0;
@@ -117,6 +123,7 @@ t = Number(t);
 // Calculate total price
 document.getElementById("sctotal").innerHTML = '$' + t.toFixed(2);
 
+// for the subtract button to minus 1 from the quantity chosen
 function subtract(clickedElement){
 	let i = clickedElement.id.slice(-1);
 	document.getElementById('schs'+i).style.visibility = "hidden";
@@ -131,6 +138,7 @@ function subtract(clickedElement){
 		quantityElements[i].innerHTML = quant[i];
 		localStorage.setItem("quant", JSON.stringify(quant));
 	}
+    // for special quantities
 	let pr = Number(quant[i])* Number(2.49);
     	if (quant[i] == 3) {
     		pr = Number(pr) - Number(1.50);
@@ -160,7 +168,7 @@ function subtract(clickedElement){
 }
 
 
-
+// for the add button to plus 1 from the quantity chosen
 function add(clickedElement){
 	let i = clickedElement.id.slice(-1);
 	document.getElementById('schs'+i).style.visibility = "hidden";
@@ -175,6 +183,7 @@ function add(clickedElement){
 		quantityElements[i].innerHTML = quant[i];
 		localStorage.setItem("quant", JSON.stringify(quant));
 	}
+    // for special quantities
 	let pr = Number(quant[i])* Number(2.49);
     	if (quant[i] == 3) {
     		pr = Number(pr) - Number(1.50);

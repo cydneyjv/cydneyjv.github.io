@@ -1,6 +1,7 @@
 
 // connected to productbrowsingpage.html and all detail pages (productdetailpage(original).html,productdetailpage(g-f).html,productdetailpage(walnut).html)
 
+// updating cart number for shopping cart icon on top right, updates onload
 function cartnum() {
 	let localStorage = window.localStorage;
  	let cart = JSON.parse(localStorage.getItem("cart"));
@@ -8,7 +9,7 @@ function cartnum() {
 	document.getElementById("sc#").innerHTML = cart.length;
 }
 
-//changing images as you change the chosen glaze
+//changing images as you change the chosen glaze for original detail page only
 function chooseglaze() {
 	let g = document.getElementById("ogglaze").value;
 	if (g == "no"){
@@ -59,7 +60,7 @@ function choosequantity(){
 
 i = 0;
 
-//carousel (original)
+//changes image, title, and description for carousel on every detail page
 function back(clickedElement){
 	let page = clickedElement.id;
 	if (page == "cogb"){
@@ -352,6 +353,7 @@ class wish {
 
 wish_list = new wish();
 
+// to add an item to the wishlist
 function wishlist() {
 	// get quantity, glaze, and name of bun
  let val = document.getElementById("ogquant").value;
@@ -391,6 +393,7 @@ function wishlist() {
  document.getElementById("atw").innerHTML = "Add to Wishlist ("+ arr.length + ")";
 }
 
+// for product browsing page, add 1 famous original cinnamon roll with no glaze
 function addonef() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -411,6 +414,7 @@ function addonef() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for product browsing page, add 1 blackberry cinnamon roll with no glaze
 function addoneb() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -431,6 +435,7 @@ function addoneb() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for product browsing page, add 1 walnut cinnamon roll with no glaze
 function addonew() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -451,6 +456,7 @@ function addonew() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for product browsing page, add 1 original (gluten-free) cinnamon roll with no glaze
 function addoneo() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -471,6 +477,7 @@ function addoneo() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for product browsing page, add 1 pumpkin spice cinnamon roll with no glaze
 function addonep() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -491,6 +498,7 @@ function addonep() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for product browsing page, add 1 caramel pecan cinnamon roll with no glaze
 function addonec() {
  let localStorage = window.localStorage;
  let cart = JSON.parse(localStorage.getItem("cart"));
@@ -511,6 +519,7 @@ function addonec() {
  localStorage.setItem("glaz", JSON.stringify(glaz));
 }
 
+// for original product detail page, add famous original cinnamon roll with specified quantity and glaze (or 1 no glaze if nothing is specified)
 function add1o(){
  let localStorage = window.localStorage;
  let name = "Famous Original Cinnamon Roll(s)";
@@ -558,6 +567,7 @@ else {
 alert("Added to Cart!" + ' (' + cart.length + ')');
 }
 
+// for original (gluten-free) product detail page, add original (gluten-free) cinnamon roll with specified quantity and glaze (or 1 no glaze if nothing is specified)
 function add1g(){
  let localStorage = window.localStorage;
  let name = "Original (Gluten-Free) Cinnamon Roll(s)";
@@ -605,6 +615,7 @@ else {
 alert("Added to Cart!" + ' (' + cart.length + ')');
 }
 
+// for walnut detail page, add walnut cinnamon roll with specified quantity and glaze (or 1 no glaze if nothing is specified)
 function add1w(){
  let localStorage = window.localStorage;
  let name = "Walnut Cinnamon Roll(s)";
