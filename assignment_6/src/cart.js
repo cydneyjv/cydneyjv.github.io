@@ -212,12 +212,15 @@ function add(clickedElement){
 	document.getElementById("sctotal").innerHTML = '$' + t.toFixed(2);
 }
 
+
+// for trash icons on the right of each shopping cart item
 let trashElements = document.querySelectorAll('.trash');
 // Set their ids
 for (var i = 0; i < trashElements.length; i++){
     	trashElements[i].id = 'sct' + i;
 	}
 
+// to trash an item, removes item from the arrays and updates the ID's of each item on the page
 function trashing(clickedElement){
 	let tid = clickedElement.id.slice(-1);
 	cart.splice(tid, 1);
