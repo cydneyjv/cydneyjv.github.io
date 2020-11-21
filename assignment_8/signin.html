@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fake sign-in page">
+    <meta name="author" content="Cydney Vicentina">
+    <!-- links for the bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- links for the bootstrap jQuery + javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- links for my css and javascript-->
+    <link rel="stylesheet" href="style.css">
+    <script src="src/script.js"></script>
+    <!-- links for the pixel font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- links for the icons used -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Cydney's Portfolio</title>
+</head>
+<body style="display: grid; align-items: center; height: 100vh">
+  <!-- adding a fake sign-in page, clicking the submit button takes you to the main page no matter what you input -->
+   <div class="container home-page">
+    <!-- add please sign in label -->
+      <div class="d-flex justify-content-center mx-auto">
+        <h2 class="form-signin-heading">Please Sign In!</h2>
+      </div>
+      <!-- begin sign in form -->
+      <form class="form-signin">
+        <!-- add and center user icon -->
+        <div class="d-flex justify-content-center mx-auto form-icon">
+            <i class="far fa-user-circle"></i>
+        </div>
+        <h4 class = "form-title">Cydney's Portfolio</h4>
+        <!-- add lines for username and password, fake -->
+        <label for="username" class="sr-only">Username</label>
+        <input id="username" class="form-control" placeholder="Username">
+        <label for="password" class="sr-only">Password</label>
+        <input id="password" class="form-control" placeholder="Password">
+        <!-- add checkbox to remember them -->
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me">Remember me</input>
+          </label>
+        </div>
+        <!-- add text to tell user that this isn't a real login page -->
+        <div class="d-flex justify-content-center mx-auto form-notreal">
+            <p style = "font-size: 10px; text-align: center; color: rgba(208, 205, 202, 1)">*This isn't real! Just click "Sign In" to continue.*</p>
+        </div>
+        <!-- add sign-in button, leads to real home page -->
+        <a href="home.html" class="btn btn-lg btn-primary btn-block form-signin-submit" type="submit">Sign In</a>
+      </form>
+
+    </div>
+</body>
+</html>
