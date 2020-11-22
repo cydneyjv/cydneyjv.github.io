@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home page">
+    <meta name="author" content="Cydney Vicentina">
+    <!-- links for the bootstrap css -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+    <!-- links for the bootstrap jQuery + javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+    <!-- links for my css and javascript-->
+    <link rel="stylesheet" href="style.css">
+    <script src="src/script.js"></script>
+    <!-- links for the pixel font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- links for the icons used -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Cydney's Portfolio</title>
+</head>
+<body>
+  <!-- adding bottom gray bar -->
+  <div class="container-fluid bottom-nav">
+    <div class="row align-items-end bottom-row">
+        <div class="col-lg-2 about-me">
+        <!-- on the left side, add a button for an "about me" popup with a shadow -->
+          <div class = "btn-primary btn-block shadow p-3 mb-5 bg-white rounded" style = "box-shadow: 2px 2px 5px grey;">About Me</div>
+        </div>
+        <!-- on the right side, add the system date and time -->
+        <div class="col-lg-4 time-date">
+          <span id = "t-d" style = "background-color: rgba(208, 205, 202, 1);color: rgba(66, 129, 164, 1);">About Me</span>
+        </div>
+        <!-- small javascript to add date / time -->
+            <script type ="text/javascript">
+              var td = new Date();
+              document.getElementById("t-d").innerHTML = td.toLocaleString();
+            </script>
+    </div>
+  </div>
+  <!-- adding center text + sprite -->
+  <div class="container-fluid">
+  
+  </div>
+</body>
+</html>

@@ -7,6 +7,7 @@
 	background-color: rgba(66, 129, 164, 1);
 	font-family: 'Press Start 2P', cursive;
 	color: rgba(229, 229, 229, 1);
+	box-sizing: border-box;
 }
 
 /* make top text centered */
@@ -77,16 +78,23 @@
   to {background-image: url("images/empty.PNG");}
 }
 
-/* add background color and position for bottom gray bar */
-.bottom-nav {
+/* add background color, columns, and position for bottom gray bar */
+.bottom-footer {
 	background-color: rgba(208, 205, 202, 1);
 	position: fixed;
 	left: 0;
 	bottom: 0;
-    height: 50px;
     width: 100%;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    z-index: 2;
 }
 
+/* add background color */
 .bottom-row {
 	background-color: rgba(208, 205, 202, 1);
 }
@@ -95,19 +103,81 @@
 .about-me {
 	background-color: rgba(208, 205, 202, 1);
 	text-align: center;
-	float:left;
 }
 
 /* add background color and alignment for right date/time */
 .time-date {
 	background-color: rgba(208, 205, 202, 1);
 	text-align: right;
-	float:right;
-	margin-top: 20px;
+	width: 100%;
+	padding-right: 20px;
 }
 
-/* add different font size for iphone x width */
+/* add space between date and time */
+#time-only {
+	padding-top: 10px;
+}
+
+/* add grid for main body (folders + padding in between) */
+.main-window {
+	padding: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    grid-auto-flow: column;
+    text-align: center;
+    justify-items: center;
+    padding-bottom: 12vh;
+}
+
+/* add a max width to the folders */
+.folder {
+	max-width: 200px;
+}
+
+/* add css to make popup window span multiple grid elements, add rounded corners too */
+#popup-window {
+	grid-area: 2/ 2/span 3/span 4;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+/* add css styling to the popup window once a folder is clicked */
+.window {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(239, 235, 230, 1);
+	color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border-style: solid;
+  	border-color: rgba(196, 196, 196, 1);
+}
+
+/* add css styling to the text inside the popup window */
+.popup-text {
+	background-color: rgba(0,0,0,0);
+	color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+}
+
+.folder-images {
+	height: 75px;
+	width: auto;
+}
+
+.folder-text {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* add different css for iphone x width */
 @media only screen and (max-width: 375px) {
+	/* add font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 20px;
 	}
@@ -119,15 +189,45 @@
 	.form-signin-submit {
 		font-size: 12px;
 	}
+
+	/* remove extra padding */
+	.time-date {
+		padding-right: 0px;
+	}
+
+	/* hide the time once the screen becomes too small */
+	#time-only{
+		visibility: hidden;
+	}
+	/* add grid for main body (folders + padding in between) */
+	.main-window {
+		padding: 20px;
+	    grid-template-rows: repeat(4, 1fr);
+	    grid-template-columns: repeat(2, 1fr);
+	    gap: 15px;
+	    padding-bottom: 15vh;
+	}
+	/* add css to make popup window span the entire screen */
+	#popup-window {
+		display: grid;
+		width: 100%;
+		height: 100%;
+	}
 }
 
-/* add different font size for iphone 5 width */
+/* add different css for iphone 5 width */
 @media only screen and (max-width: 320px) {
+	/* add font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 18px;
 	}
 
 	.fa-user-circle {
 		font-size:100px;
+	}
+	/* add grid for main body (folders + padding in between) */
+	.main-window {
+		padding: 10px;
+	    grid-template-rows: repeat(3, 1fr);
 	}
 }

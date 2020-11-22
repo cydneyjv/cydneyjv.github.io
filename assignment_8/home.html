@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home page">
     <meta name="author" content="Cydney Vicentina">
-    <!-- links for the bootstrap css -->
+    <!-- links for the bootstrap css, not used -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-    <!-- links for the bootstrap jQuery + javascript -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- links for the bootstrap jQuery + javascript not used -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
     <!-- links for my css and javascript-->
     <link rel="stylesheet" href="style.css">
@@ -24,26 +24,51 @@
 </head>
 <body>
   <!-- adding bottom gray bar -->
-  <div class="container-fluid bottom-nav">
-    <div class="row align-items-end bottom-row">
-        <div class="col-lg-2 about-me">
-        <!-- on the left side, add a button for an "about me" popup with a shadow -->
-          <div class = "btn-primary btn-block shadow p-3 mb-5 bg-white rounded" style = "box-shadow: 2px 2px 5px grey;">About Me</div>
-        </div>
-        <!-- on the right side, add the system date and time -->
-        <div class="col-lg-4 time-date">
-          <span id = "t-d" style = "background-color: rgba(208, 205, 202, 1);color: rgba(66, 129, 164, 1);">About Me</span>
-        </div>
-        <!-- small javascript to add date / time -->
-            <script type ="text/javascript">
-              var td = new Date();
-              document.getElementById("t-d").innerHTML = td.toLocaleString();
-            </script>
+  <div class="bottom-footer">
+    <div class="about-me">
+    <!-- on the left side, add a button for an "about me" popup with a shadow -->
+      <div style = "box-shadow: 2px 2px 5px grey; background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1); padding: 15px">About Me</div>
     </div>
+    <!-- on the right side, add the system date and time -->
+    <div class="time-date">
+      <span id = "t-d" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1)">Date/Time</span>
+      <div id="time-only" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1)">
+
+      </div>
+    </div>
+    <!-- small javascript to add date / time -->
+        <script type ="text/javascript">
+          var td = new Date();
+          document.getElementById("t-d").innerHTML = td.toLocaleString().split(", ")[0];
+          document.getElementById("time-only").innerHTML = td.toLocaleString().split(", ")[1];
+        </script>
   </div>
-  <!-- adding center text + sprite -->
-  <div class="container-fluid">
-  
+  <!-- adding main window div (center text + folders + sprite) -->
+  <div class="main-window">
+    <!-- adding divs for each folder, each containing a button that contains the image icon and the title text underneath-->
+    <div id = "process-books" class = "folder">
+      <img class = "folder-images" src = "images/f1.PNG" alt = "CMU Process Books">
+      <h6 class = "folder-text">CMU Process Books</h6>
+    </div>
+    <div id = "coding-projects" class = "folder">
+      <img class = "folder-images" src = "images/f2.PNG" alt = "UCLA Coding Projects">
+      <h6 class = "folder-text">UCLA Coding Projects</h6>
+    </div>
+    <div id = "video-edits" class = "folder">
+      <img class = "folder-images" src = "images/f3.PNG" alt = "Video Editing and Pitches">
+      <h6 class = "folder-text">Video Editing and Pitches</h6>
+    </div>
+    <div id = "research-projects" class = "folder">
+      <img class = "folder-images" src = "images/f4.PNG" alt = "Research Experience">
+      <h6 class = "folder-text">Research Experience</h6>
+    </div>
+    <div id = "advertising-books" class = "folder">
+      <img class = "folder-images" src = "images/f5.PNG" alt = "Advertising Plans Books">
+      <h6 class = "folder-text">Advertising Plans Books</h6>
+    </div>
+    <!-- adding div for popup window (when a folder is opened), html is added through my jQuery file (script.js) -->
+    <div id = "popup-window" class = "gray-popup">
+    </div>
   </div>
 </body>
 </html>
