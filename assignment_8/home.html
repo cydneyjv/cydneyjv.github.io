@@ -10,6 +10,8 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
     <!-- links for the bootstrap jQuery + javascript not used -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <!-- adding pdf viewer js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
     <!-- links for my css and javascript-->
     <link rel="stylesheet" href="style.css">
@@ -23,11 +25,17 @@
     <title>Cydney's Portfolio</title>
 </head>
 <body>
+  <!-- adding a hidden div for the about me tabs that will pop up when you click the "About Me" button -->
+  <div class = "about-me-tabs">
+  </div>
+  <!-- adding an invisible div behind the about me tabs with an on click event listener to tell the css to hide the about me tabs when the user clicks anywhere outside of the tabs -->
+  <div class = "invisible-div">
+  </div>
   <!-- adding bottom gray bar -->
   <div class="bottom-footer">
     <div class="about-me">
     <!-- on the left side, add a button for an "about me" popup with a shadow -->
-      <div style = "box-shadow: 2px 2px 5px grey; background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1); padding: 15px">About Me</div>
+      <div id = "about-me-button">About Me</div>
     </div>
     <!-- on the right side, add the system date and time -->
     <div class="time-date">
@@ -39,35 +47,49 @@
     <!-- small javascript to add date / time -->
         <script type ="text/javascript">
           var td = new Date();
+          // split the date and time into two elements
           document.getElementById("t-d").innerHTML = td.toLocaleString().split(", ")[0];
           document.getElementById("time-only").innerHTML = td.toLocaleString().split(", ")[1];
         </script>
   </div>
+  <!-- adding a div for the main window which will take up the whole screen on mobile -->
+  <div class = "main-window-mobile">
+
+  </div>
   <!-- adding main window div (center text + folders + sprite) -->
   <div class="main-window">
-    <!-- adding divs for each folder, each containing a button that contains the image icon and the title text underneath-->
+    <!-- adding div for popup window (when a folder is opened), html is added through my jQuery file (script.js) -->
+    <div id = "popup-window">
+
+    </div>
+    <!-- adding a unique div for each folder, each containing the image icon and the title text underneath-->
     <div id = "process-books" class = "folder">
-      <img class = "folder-images" src = "images/f1.PNG" alt = "CMU Process Books">
+      <img class = "folder-images pixelart" src = "images/f1.PNG" alt = "CMU Process Books">
       <h6 class = "folder-text">CMU Process Books</h6>
     </div>
     <div id = "coding-projects" class = "folder">
-      <img class = "folder-images" src = "images/f2.PNG" alt = "UCLA Coding Projects">
+      <img class = "folder-images pixelart" src = "images/f2.PNG" alt = "UCLA Coding Projects">
       <h6 class = "folder-text">UCLA Coding Projects</h6>
     </div>
     <div id = "video-edits" class = "folder">
-      <img class = "folder-images" src = "images/f3.PNG" alt = "Video Editing and Pitches">
-      <h6 class = "folder-text">Video Editing and Pitches</h6>
+      <img class = "folder-images pixelart" src = "images/f3.PNG" alt = "Video Editing & Pitches">
+      <h6 class = "folder-text">Video Editing & Pitches</h6>
     </div>
     <div id = "research-projects" class = "folder">
-      <img class = "folder-images" src = "images/f4.PNG" alt = "Research Experience">
+      <img class = "folder-images pixelart" src = "images/f4.PNG" alt = "Research Experience">
       <h6 class = "folder-text">Research Experience</h6>
     </div>
     <div id = "advertising-books" class = "folder">
-      <img class = "folder-images" src = "images/f5.PNG" alt = "Advertising Plans Books">
+      <img class = "folder-images pixelart" src = "images/f5.PNG" alt = "Advertising Plans Books">
       <h6 class = "folder-text">Advertising Plans Books</h6>
     </div>
-    <!-- adding div for popup window (when a folder is opened), html is added through my jQuery file (script.js) -->
-    <div id = "popup-window" class = "gray-popup">
+    <div class = "sprite-text">
+      <h6 class = "sprite-saying">Welcome to Cydney Vicentina's Portfolio!</h6>
+      <!-- adding a div for my sprite! -->
+      <div id = "sprite">
+        <!-- the class determines what the sprite is doing ("wave-left" is the action and direction she's facing) -->
+        <img class = "sprite-sheet pixelart wave-front" src = "images/cjv-sprite.png" alt = "sprite image">
+      </div>
     </div>
   </div>
 </body>

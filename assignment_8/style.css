@@ -8,6 +8,7 @@
 	font-family: 'Press Start 2P', cursive;
 	color: rgba(229, 229, 229, 1);
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 /* make top text centered */
@@ -91,7 +92,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: auto 1fr;
     gap: 20px;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* add background color */
@@ -99,10 +100,55 @@
 	background-color: rgba(208, 205, 202, 1);
 }
 
-/* add background color and alignment for left "about me" button */
+/* for the invisible div, make it transparent and put it right behind the about-me tabs */
+.invisible-div{
+	z-index: 4;
+	position: fixed;
+	background-color: rgba(0,0,0,0);
+}
+
+/* add background color and alignment for left "about me" button, change the cursor to be a pointer too */
 .about-me {
 	background-color: rgba(208, 205, 202, 1);
 	text-align: center;
+	box-shadow: 2px 2px 5px grey;
+	cursor: pointer;
+}
+
+/* make sure the about me button is the right color and padding */
+#about-me-button {
+	background-color: rgba(0,0,0,0);
+	color: rgba(66, 129, 164, 1);
+	padding: 15px;
+}
+
+/* add a background color to the about me button when hovered over */
+.about-me:hover {
+	background-color: rgba(173, 173, 173, 1);
+}
+
+/* position the about-me tabs with the correct z-index, add 3 rows, and bottom padding */
+.about-me-tabs {
+	position: fixed;
+	/* visibility: hidden;
+	display: none; */
+	width: 230px;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	bottom: 10vh;
+	left: 5vw;
+	z-index: 5;
+}
+
+/* change the color and size of the labels, add a border too */
+.about-me-labels{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(208, 205, 202, 1);
+	border-style: solid;
+	border-color: rgba(196, 196, 196, 1);
+	color: rgba(66, 129, 164, 1);
+	padding: 5px;
 }
 
 /* add background color and alignment for right date/time */
@@ -125,18 +171,26 @@
     align-items: center;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     height: 100vh;
     grid-auto-flow: column;
     text-align: center;
     justify-items: center;
     padding-bottom: 12vh;
+    margin-top: -8px;
 }
 
 /* add a max width to the folders */
 .folder {
 	max-width: 200px;
+}
+
+/* add a background color and padding to the folder images when hovered over */
+.folder-images:hover {
+	padding: 5px;
+	background-color: rgba(47, 99, 128, 1);
+	cursor: pointer;
 }
 
 /* add css to make popup window span multiple grid elements, add rounded corners too */
@@ -145,6 +199,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
+	z-index: 6;
 }
 
 /* add css styling to the popup window once a folder is clicked */
@@ -156,27 +211,271 @@
 	border-radius: 10px;
 	border-style: solid;
   	border-color: rgba(196, 196, 196, 1);
+  	display: grid;
+  	grid-template-rows: auto auto 1fr;
+}
+
+/* make the exit and back button the right color */
+.exit-button, .back-button {
+	background-color: rgba(239, 235, 230, 1);
+	color: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+}
+
+/* hide the back button until needed */
+.back-button{
+	visibility: hidden;
+	z-index: 8;
+}
+
+/* change colors for the popup window */
+.window-row span, .window-row{
+	background-color: rgba(239, 235, 230, 1);
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* add padding and borders to the "rows" in the popup window */
+.window-row {
+	padding: 15px;
+	border-style: solid;
+  	border-color: rgba(196, 196, 196, 1);
+}
+
+/* change colors for the popup window, add another border at the bottom */
+.window-main-row{
+	background-color: rgba(239, 235, 230, 1);
+	color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	border-bottom: solid rgba(196, 196, 196, 1);
+	display: grid;
+	grid-template-rows: 3fr 2fr;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 }
 
 /* add css styling to the text inside the popup window */
-.popup-text {
+.pop-up-text {
 	background-color: rgba(0,0,0,0);
 	color: rgba(0, 0, 0, 0.5);
-	padding: 20px;
+	padding: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
+/* change color of the popup row */
+.pb{
+	background-color: rgba(0,0,0,0);
+	color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	object-fit: cover;
+}
+
+/* center and allow scrolling for the pdf viewer */
+.pdf-file{
+	justify-content: center;
+	grid-area: 1/ 1/span 2/span 3;
+	height: 100%;
+	width: 100%;
+	z-index: 7;
+	background-color: rgba(0,0,0,0);
+}
+
+/* create a class for the iframes to size them */
+.frames{
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+
+/* change size and position of the popup images */
+.pop-up-image {
+	background-color: rgba(0,0,0,0);
+	height: 80%;
+	width: auto;
+	border-style: solid;
+	border-color: rgba(196, 196, 196, 1);
+}
+
+/* change size of folder icons */
 .folder-images {
 	height: 75px;
 	width: auto;
 }
 
+/* condense the folder text */
 .folder-text {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
+/* make a css variable (to enlarge the sprite) */
+:root {
+   --pixel-size: 2;
+}
+
+/* change the positioning of the sprite's text */
+.sprite-text {
+	grid-area: 4/ 6/span 1/span 1;
+	align-self: center;
+	justify-content: center;
+}
+
+/* remove padding and align to the bottom */
+.sprite-saying{
+	display: grid;
+	padding: 0;
+	color: rgba(173, 173, 173, 1);
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+/* crop the sprite div */
+#sprite{
+	width: calc(50px * var(--pixel-size));
+	height: calc(50px * var(--pixel-size));
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* add animation and change the positioning */
+.sprite-sheet {
+	animation: moveSpritesheet 2s steps(6) infinite;
+	width: calc(650px * var(--pixel-size));
+	position: relative;
+}
+
+/* tell css not to blur the image */
+.pixelart {
+   image-rendering: pixelated;
+}
+
+/* using the sprite sheet, add classes for each action and direction */
+/* magic-back doesn't need a top value, next 3 are magic actions */
+.magic-left {
+   top: calc(-54px * var(--pixel-size));
+}
+
+.magic-front {
+   top: calc(-108px * var(--pixel-size));
+}
+
+.magic-right {
+   top: calc(-162px * var(--pixel-size));
+}
+
+/* next 4 are weapon thrust actions */
+.thrust-back {
+   top: calc(-217px * var(--pixel-size));
+}
+
+.thrust-left {
+   top: calc(-271px * var(--pixel-size));
+}
+
+.thrust-front {
+   top: calc(-325px * var(--pixel-size));
+}
+
+.thrust-right {
+   top: calc(-379px * var(--pixel-size));
+}
+
+/* next 4 are walking actions */
+.walk-back {
+   top: calc(-434px * var(--pixel-size));
+}
+
+.walk-left {
+   top: calc(-488px * var(--pixel-size));
+}
+
+.walk-front {
+   top: calc(-542px * var(--pixel-size));
+}
+
+.walk-right {
+   top: calc(-596px * var(--pixel-size));
+}
+
+/* next 4 are slash actions */
+.slash-back {
+   top: calc(-651px * var(--pixel-size));
+}
+
+.slash-left {
+   top: calc(-705px * var(--pixel-size));
+}
+
+.slash-front {
+   top: calc(-759px * var(--pixel-size));
+}
+
+.slash-right {
+   top: calc(-813px * var(--pixel-size));
+}
+
+/* next 4 are shoot actions */
+.shoot-back {
+   top: calc(-869px * var(--pixel-size));
+}
+
+.shoot-left {
+   top: calc(-923px * var(--pixel-size));
+}
+
+.shoot-front {
+   top: calc(-977px * var(--pixel-size));
+}
+
+.shoot-right {
+   top: calc(-1031px * var(--pixel-size));
+}
+
+/* next 1 is a falling action */
+.fall-front {
+   top: calc(-1087px * var(--pixel-size));
+}
+
+/* next 4 are waving actions */
+.wave-back {
+   top: calc(-1141px * var(--pixel-size));
+}
+
+.wave-left {
+   top: calc(-1195px * var(--pixel-size));
+}
+
+.wave-front {
+   top: calc(-1249px * var(--pixel-size));
+}
+
+.wave-right {
+   top: calc(-1303px * var(--pixel-size));
+}
+
+/* add animation by moving the crop of the image */
+@keyframes moveSpritesheet {
+   from {
+      transform: translate3d(0px,0,0)
+   }
+   to {
+      transform: translate3d(-50%,0,0)
+   }
+}
+
+/* for the mobile popup window, keep it hidden at first but then change when a folder is clicked */
+.main-window-mobile {
+	visibility: hidden;
+	display: none;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
 /* add different css for iphone x width */
-@media only screen and (max-width: 375px) {
+@media (max-width: 750px) {
 	/* add font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 20px;
@@ -207,27 +506,125 @@
 	    gap: 15px;
 	    padding-bottom: 15vh;
 	}
-	/* add css to make popup window span the entire screen */
+	/* add css to make desktop popup window disappear */
 	#popup-window {
+		display: none;
+	}
+
+	/* move the sprite text to fit in the new grid */
+	.sprite-text {
+		grid-area: 4/ 2/span 1/span 1;
+	}
+
+	/* show the mobile window view */
+	.main-window-mobile {
+		visibility: visible;
 		display: grid;
+		height: 100vh;
+		padding-bottom: 10vh;
+	}
+
+	/* for the popup window, make font smaller */
+	.window-row{
+		font-size: 11px;
+		text-align: center;
+	}
+
+	/* for the popup window, fix the middle row by losing the columns and fixing the height */
+	.window-main-row{
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		gap: 10px;
+		overflow: scroll;
+		justify-content: center;
+	}
+
+	/* for the popup window, make the images smaller and centered */
+	.pop-up-image{
+		width: 50%;
+		height: auto;
+		align-self: center;
+		justify-self: center;
+	}
+
+	/* for the popup window, center the text */
+	.pb{
+		text-align: center;
+	}
+
+	/* for the popup window, change the span for the pdf viewers */
+	.pdf-file{
+		grid-area: 1/ 1/span 3/span 1;
+		background-color: rgba(239, 235, 230, 1);
 		width: 100%;
 		height: 100%;
+		justify-self: center;
+		align-self: center;
 	}
+
+	.window{
+		width: 100vw;
+	}
+
 }
 
 /* add different css for iphone 5 width */
-@media only screen and (max-width: 320px) {
+@media (max-width: 320px) {
 	/* add font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 18px;
 	}
-
+	/* change size of the user circle icon */
 	.fa-user-circle {
 		font-size:100px;
 	}
 	/* add grid for main body (folders + padding in between) */
 	.main-window {
 		padding: 10px;
-	    grid-template-rows: repeat(3, 1fr);
+		gap: 10px;
+		padding-bottom: 10vh;
 	}
+	/* make the folder icons smaller */
+	.folder-images {
+		height: 50px;
+		width: auto;
+	}
+	/* make the about me and the date text smaller */
+	.about-me, .time-date{
+		font-size: 12px;
+	}
+	/* lessen the padding for the about me button */
+	#about-me-button {
+		padding: 10px;
+	}
+	/* make the bottom gray bar smaller */
+	.bottom-footer {
+		height: 50px;
+		padding: 10px;
+	}
+
+	/* lessen the padding on the folder text */
+	.folder-text{
+		margin-block-start: 1.5em;
+    	margin-block-end: 1.5em;
+    	padding-left: 5px;
+        padding-right: 5px;
+	}
+	/* show the mobile main window */
+	.main-window-mobile {
+		visibility: visible;
+		display: grid;
+		padding-bottom: 9vh;
+	}
+
+	/* make the sprite smaller */
+	:root {
+	   --pixel-size: 1.5;
+	}
+
+	/* for the popup window, make the images even smaller */
+	.pop-up-image{
+		width: 30%;
+	}
+
 }
