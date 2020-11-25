@@ -3,7 +3,7 @@
 jQuery (function() {
 	// for the process book folder, on click, change the html of the popup window
 
-    let pb0 = `<div class = "pb pb-1" style = "object-fit: cover;"><img class = "pop-up-image" src = "images/p1-pb.PNG" alt = "Process Book 1"><h5 class = "pop-up-text">UI Website Redesign</h5></div><div class = "pb pb-2"><img class = "pop-up-image" src = "images/p2-pb.PNG" alt = "Process Book 2"><h5 class = "pop-up-text">Lamp Control Redesign</h5></div><div class = "pb pb-3"><img class = "pop-up-image" src = "images/p3-pb.PNG" alt = "Process Book 3"><h5 class = "pop-up-text">Adidas Dashboard Design</h5></div><script src = "src/process-books.js"></script>`;
+    let pb0 = `<div class = "pb pb-1" style = "object-fit: cover;"><img class = "pop-up-image" src = "images/p1-pb.PNG" alt = "Process Book 1"><h5 class = "pop-up-text">UI Website Redesign</h5></div><div class = "pb pb-2"><img class = "pop-up-image" src = "images/p2-pb.PNG" alt = "Process Book 2"><h5 class = "pop-up-text">Lamp Control Redesign</h5></div><div class = "pb pb-3"><img class = "pop-up-image" src = "images/p3-pb.PNG" alt = "Process Book 3"><h5 class = "pop-up-text">Adidas Dashboard Design</h5></div>`;
 
 	let pw = `
 		<div class = "window">
@@ -32,10 +32,40 @@ jQuery (function() {
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb0}');
           	$(".back-button").css('visibility','hidden');
+          	  $(".pb-1").on("click", function() {
+			    let pb1 = '<div class = "pdf-file"><iframe src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    $(".window-main-row").html(pb1);
+			    $(".back-button").css('visibility','visible');
+			  })
+			  $(".pb-2").on("click", function() {
+			    let pb2 = '<div class = "pdf-file"><iframe src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    $(".window-main-row").html(pb2);
+			    $(".back-button").css('visibility','visible');
+			  })
+			  $(".pb-3").on("click", function() {
+			    let pb3 = '<div class = "pdf-file"><iframe src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    $(".window-main-row").html(pb3);
+			    $(".back-button").css('visibility','visible');
+			  })
           })
+          $(".pb-1").on("click", function() {
+		    let pb1 = '<div class = "pdf-file"><iframe src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    $(".window-main-row").html(pb1);
+		    $(".back-button").css('visibility','visible');
+		  })
+		  $(".pb-2").on("click", function() {
+		    let pb2 = '<div class = "pdf-file"><iframe src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    $(".window-main-row").html(pb2);
+		    $(".back-button").css('visibility','visible');
+		  })
+		  $(".pb-3").on("click", function() {
+		    let pb3 = '<div class = "pdf-file"><iframe src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    $(".window-main-row").html(pb3);
+		    $(".back-button").css('visibility','visible');
+		  })
         })
       </script>
-      `;
+    `;
 
 	$("#process-books").on("click",function pb() {
 		// html for the popup window here
@@ -298,6 +328,7 @@ jQuery (function() {
 		$(".about-me-tabs").html(am);
 		$(".about-me-tabs").css('z-index', '101');
 		$(".about-me-main").css('z-index', '100');
+		$(".invisible-div").css('z-index', '99');
 		$(".invisible-div").css('width','100vw');
 		$(".invisible-div").css('height','100vh');
 	})
@@ -308,6 +339,7 @@ jQuery (function() {
 		$("#am-resume").html(ind);
 		$("#am-contact").html(ind);
 		$("#am-fun").html(ind);
+		$(".about-me-main").css('z-index', '0');
 		$(".invisible-div").css('width','0');
 		$(".invisible-div").css('height','0');
 	})

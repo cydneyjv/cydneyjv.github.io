@@ -93,6 +93,7 @@
     grid-template-columns: auto 1fr;
     gap: 20px;
     z-index: 3;
+    height: 86px;
 }
 
 /* add background color */
@@ -135,7 +136,7 @@
 	width: 230px;
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
-	bottom: 10vh;
+	bottom: 87px;
 	left: 5vw;
 	z-index: 5;
 }
@@ -577,7 +578,6 @@
 	/* position the about-me tabs */
 	.about-me-tabs {
 		width: 215px;
-		bottom: 8vh;
 		left: 3vw;
 	}
 
@@ -639,7 +639,6 @@
 	/* position the about-me tabs */
 	.about-me-tabs {
 		width: 200px;
-   		bottom: 10vh;
 		left: 3vw;
 	}
 
@@ -716,7 +715,6 @@
 	.about-me-tabs {
 		font-size: 12px;
 	    width: 150px;
-	    bottom: 9vh;
 	    left: 3vw;
 	}
 

@@ -15,4 +15,4 @@ jQuery (function() {
     $(".window-main-row").html(pb3);
     $(".back-button").css('visibility','visible');
   })
-}
+})
