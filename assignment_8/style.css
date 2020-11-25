@@ -153,6 +153,7 @@
 	align-content: center;
 	bottom: 15vh;
 	background-color: rgba(0,0,0,0);
+	z-index: -1;
 }
 
 /* add css for when one of the 3 labels is clicked (change the background and text color, add padding, align things center) */

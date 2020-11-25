@@ -339,7 +339,7 @@ jQuery (function() {
 		$("#am-resume").html(ind);
 		$("#am-contact").html(ind);
 		$("#am-fun").html(ind);
-		$(".about-me-main").css('z-index', '0');
+		$(".about-me-main").css('z-index', '-1');
 		$(".invisible-div").css('width','0');
 		$(".invisible-div").css('height','0');
 	})
