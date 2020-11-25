@@ -140,13 +140,39 @@
 	z-index: 5;
 }
 
+/* position the about-me main area, invisible for now */
+.about-me-main {
+	position: fixed;
+	left: 25vw;
+	/* visibility: hidden;
+	display: none; */
+	width: 800px;
+	height: 80%;
+	justify-self: center;
+	align-content: center;
+	bottom: 15vh;
+	background-color: rgba(0,0,0,0);
+}
+
+/* add css for when one of the 3 labels is clicked (change the background and text color, add padding, align things center) */
+.about-me-file {
+	background-color: rgba(191, 191, 191, 1);
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	color: rgba(95, 94, 94, 1);
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+}
+
 /* change the color and size of the labels, add a border too */
 .about-me-labels{
 	width: 100%;
 	height: 100%;
-	background-color: rgba(208, 205, 202, 1);
+	background-color: rgba(191, 191, 191, 1);
 	border-style: solid;
-	border-color: rgba(196, 196, 196, 1);
+	border-color: rgba(156, 156, 156, 1);
 	color: rgba(66, 129, 164, 1);
 	padding: 5px;
 }
@@ -239,6 +265,11 @@
 	padding: 15px;
 	border-style: solid;
   	border-color: rgba(196, 196, 196, 1);
+}
+
+/* new class for the back button */
+.window-top{
+
 }
 
 /* change colors for the popup window, add another border at the bottom */
@@ -474,30 +505,8 @@
 	left: 0;
 }
 
-/* add different css for iphone x width */
-@media (max-width: 750px) {
-	/* add font sizes for the sign in page */
-	.form-signin-heading {
-		font-size: 20px;
-	}
-
-	.form-title {
-		font-size: 15px;
-	}
-
-	.form-signin-submit {
-		font-size: 12px;
-	}
-
-	/* remove extra padding */
-	.time-date {
-		padding-right: 0px;
-	}
-
-	/* hide the time once the screen becomes too small */
-	#time-only{
-		visibility: hidden;
-	}
+/* add different css for about an ipad's width */
+@media (max-width: 768px) {
 	/* add grid for main body (folders + padding in between) */
 	.main-window {
 		padding: 20px;
@@ -521,12 +530,11 @@
 		visibility: visible;
 		display: grid;
 		height: 100vh;
-		padding-bottom: 10vh;
+		padding-bottom: 8vh;
 	}
 
-	/* for the popup window, make font smaller */
+	/* for the popup window, center text */
 	.window-row{
-		font-size: 11px;
 		text-align: center;
 	}
 
@@ -541,7 +549,7 @@
 
 	/* for the popup window, make the images smaller and centered */
 	.pop-up-image{
-		width: 50%;
+		width: 40%;
 		height: auto;
 		align-self: center;
 		justify-self: center;
@@ -564,6 +572,83 @@
 
 	.window{
 		width: 100vw;
+	}
+
+	/* position the about-me tabs */
+	.about-me-tabs {
+		width: 215px;
+		bottom: 8vh;
+		left: 3vw;
+	}
+
+	/* position the about-me main area */
+	.about-me-main {
+		left: 15vw;
+	    width: 600px;
+	    height: 85%;
+	    bottom: 15vh;
+	}
+
+}
+
+/* add different css for iphone x width */
+@media (max-width: 375px) {
+	/* add font sizes for the sign in page */
+	.form-signin-heading {
+		font-size: 20px;
+	}
+
+	.form-title {
+		font-size: 15px;
+	}
+
+	.form-signin-submit {
+		font-size: 12px;
+	}
+
+	/* remove extra padding */
+	.time-date {
+		padding-right: 0px;
+	}
+
+	/* hide the time once the screen becomes too small */
+	#time-only{
+		visibility: hidden;
+		display: none;
+	}
+
+	/* show the mobile window view */
+	.main-window-mobile {
+		padding-bottom: 10vh;
+	}
+
+	/* for the popup window, make font smaller */
+	.window-row{
+		font-size: 11px;
+		text-align: center;
+	}
+
+	/* for the popup window, make the images smaller and centered */
+	.pop-up-image{
+		width: 50%;
+		height: auto;
+		align-self: center;
+		justify-self: center;
+	}
+
+	/* position the about-me tabs */
+	.about-me-tabs {
+		width: 200px;
+   		bottom: 10vh;
+		left: 3vw;
+	}
+
+	/* position the about-me main area */
+	.about-me-main {
+		left: 8vw;
+	    width: 315px;
+	    height: 83%;
+	    bottom: 15vh;
 	}
 
 }
@@ -625,6 +710,27 @@
 	/* for the popup window, make the images even smaller */
 	.pop-up-image{
 		width: 30%;
+	}
+
+	/* position the about-me tabs */
+	.about-me-tabs {
+		font-size: 12px;
+	    width: 150px;
+	    bottom: 9vh;
+	    left: 3vw;
+	}
+
+	/* position the about-me main area */
+	.about-me-main {
+		left: 8vw;
+	    width: 265px;
+	    height: 75%;
+	    bottom: 23vh;
+	}
+
+	/* change padding */
+	.about-me-file {
+		padding: 10px;
 	}
 
 }
