@@ -61,7 +61,7 @@
 	display: grid;
 	align-items:center;
 	/* add background image for animation */
-	background-image: url("images/flower.PNG");
+	background-image: url("assets/images/flower.PNG");
 	height: 170px;
  	background-position: center; /* Center the image */
  	background-repeat: no-repeat; /* Do not repeat the image */
@@ -75,8 +75,8 @@
 
 /* add animation - cycle through two user icons (flower and plain blue) */
 @keyframes usercircle {
-  from {background-image: url("images/flower.PNG");}
-  to {background-image: url("images/empty.PNG");}
+  from {background-image: url("assets/images/flower.PNG");}
+  to {background-image: url("assets/images/empty.PNG");}
 }
 
 /* add background color, columns, and position for bottom gray bar */
