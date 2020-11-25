@@ -33,33 +33,33 @@ jQuery (function() {
           	$(".window-main-row").html('${pb0}');
           	$(".back-button").css('visibility','hidden');
           	  $(".pb-1").on("click", function() {
-			    let pb1 = '<div class = "pdf-file"><object class = "frames" data="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto" type = "application/pdf"><embed src = "media/p1-pb.pdf" type = "application/pdf"/></object></div>';
+			    let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 			    $(".window-main-row").html(pb1);
 			    $(".back-button").css('visibility','visible');
 			  })
 			  $(".pb-2").on("click", function() {
-			    let pb2 = '<div class = "pdf-file"><iframe src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    let pb2 = '<div class = "pdf-file"><iframe class = "frames" src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 			    $(".window-main-row").html(pb2);
 			    $(".back-button").css('visibility','visible');
 			  })
 			  $(".pb-3").on("click", function() {
-			    let pb3 = '<div class = "pdf-file"><iframe src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 			    $(".window-main-row").html(pb3);
 			    $(".back-button").css('visibility','visible');
 			  })
           })
           $(".pb-1").on("click", function() {
-		    let pb1 = '<div class = "pdf-file"><iframe src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 		    $(".window-main-row").html(pb1);
 		    $(".back-button").css('visibility','visible');
 		  })
 		  $(".pb-2").on("click", function() {
-		    let pb2 = '<div class = "pdf-file"><iframe src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    let pb2 = '<div class = "pdf-file"><iframe class = "frames" src="media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 		    $(".window-main-row").html(pb2);
 		    $(".back-button").css('visibility','visible');
 		  })
 		  $(".pb-3").on("click", function() {
-		    let pb3 = '<div class = "pdf-file"><iframe src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+		    let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
 		    $(".window-main-row").html(pb3);
 		    $(".back-button").css('visibility','visible');
 		  })
@@ -106,12 +106,12 @@ jQuery (function() {
             $(".main-window-mobile").html(noo);
           })
           $(".pb-1").on("click", function() {
-            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="media/play_bs.pdf" style = "overflow: auto"></iframe></div>';
+            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="media/play_bs.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb1);
             $(".back-button").css('visibility','visible');
           })
           $(".pb-2").on("click", function() {
-            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src="media/r-package.pdf" style = "overflow: auto"></iframe></div>';
+            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src="media/r-package.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb2);
             $(".back-button").css('visibility','visible');
           })
@@ -223,12 +223,12 @@ jQuery (function() {
             $(".main-window-mobile").html(noo);
           })
           $(".pb-1").on("click", function() {
-            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "media/twitch.pdf" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
+            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "media/twitch.pdf" width= "500" height= "300" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
             $(".window-main-row").html(pb1);
             $(".back-button").css('visibility','visible');
           })
           $(".pb-2").on("click", function() {
-            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src = "media/cfa.pdf" style = "overflow: auto"></iframe></div>';
+            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src = "media/cfa.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb2);
             $(".back-button").css('visibility','visible');
           })
@@ -279,17 +279,17 @@ jQuery (function() {
             $(".main-window-mobile").html(noo);
           })
           $(".pb-1").on("click", function() {
-            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2018-at.pdf" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
+            let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2018-at.pdf" width= "500" height= "300" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
             $(".window-main-row").html(pb1);
             $(".back-button").css('visibility','visible');
           })
           $(".pb-2").on("click", function() {
-            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2019-at.pdf" style = "overflow: auto"></iframe></div>';
+            let pb2 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2019-at.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb2);
             $(".back-button").css('visibility','visible');
           })
           $(".pb-3").on("click", function() {
-            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2020-at.pdf" style = "overflow: auto"></iframe></div>';
+            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src = "media/2020-at.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb3);
             $(".back-button").css('visibility','visible');
           })
@@ -312,15 +312,15 @@ jQuery (function() {
 
     	<script>
     		$("#am-resume").on("click", function() {
-    			let amr = '<div class = "about-me-file">hello resume</div>';
+    			let amr = '<div class = "about-me-file"><iframe class = "frames" src="media/resume.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
     			$(".about-me-main").html(amr);
     		})
     		$("#am-contact").on("click", function() {
-    			let amc = '<div class = "about-me-file">hello contact</div>';
+    			let amc = '<div class = "about-me-file"><h3 style = "text-decoration: underline">Contact Me</h3><br><a href = "https://www.linkedin.com/in/cydney-vicentina-000236159/">LinkedIn</a><br><h4>Phone Me: (510) 931 0938</h4><br><a href = "mailto:cjvicentinacmu@gmail.com">Email Me: cjvicentinacmu@gmail.com</a></div>';
     			$(".about-me-main").html(amc);
     		})
     		$("#am-fun").on("click", function() {
-    			let amf = '<div class = "about-me-file">hello fun</div>';
+    			let amf = '<div class = "about-me-file"><h3 style = "text-decoration: underline">Fun Facts About Me!</h3><br><h4>I love sudoku!</h4></iframe></div>';
     			$(".about-me-main").html(amf);
     		})
     	</script>
