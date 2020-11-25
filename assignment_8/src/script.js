@@ -33,7 +33,7 @@ jQuery (function() {
           	$(".window-main-row").html('${pb0}');
           	$(".back-button").css('visibility','hidden');
           	  $(".pb-1").on("click", function() {
-			    let pb1 = '<div class = "pdf-file"><iframe src="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
+			    let pb1 = '<div class = "pdf-file"><object class = "frames" data="media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto" type = "application/pdf"><embed src = "media/p1-pb.pdf" type = "application/pdf"/></object></div>';
 			    $(".window-main-row").html(pb1);
 			    $(".back-button").css('visibility','visible');
 			  })
