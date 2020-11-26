@@ -8,7 +8,7 @@ jQuery (function() {
 	let pw = `
 		<div class = "window">
         <div class="window-row window-top">
-          CMU Process Books
+          CMU Design Process Books
           <button id = "pb-back-button" class = "back-button" style = "float: left"><</button>
           <button class = "exit-button" style = "float: right">X</button>
         </div>
@@ -72,6 +72,9 @@ jQuery (function() {
 		// change the html here
 		$("#popup-window").html(pw);
 		$(".main-window-mobile").html(pw);
+    $(".invisible-div").css('z-index', '5');
+    $(".invisible-div").css('width','100vw');
+    $(".invisible-div").css('height','100vh');
 	})
 
 
@@ -135,6 +138,9 @@ jQuery (function() {
 		// change the html here
 		$("#popup-window").html(pw);
 		$(".main-window-mobile").html(pw);
+    $(".invisible-div").css('z-index', '5');
+    $(".invisible-div").css('width','100vw');
+    $(".invisible-div").css('height','100vh');
 	})
 
 	// for the video projects folder, on click, change the html of the popup window
@@ -207,6 +213,9 @@ jQuery (function() {
 		// change the html here
 		$("#popup-window").html(pw);
 		$(".main-window-mobile").html(pw);
+    $(".invisible-div").css('z-index', '5');
+    $(".invisible-div").css('width','100vw');
+    $(".invisible-div").css('height','100vh');
 	})
 
 	// for the research experience folder, on click, change the html of the popup window
@@ -268,6 +277,9 @@ jQuery (function() {
 		// change the html here
 		$("#popup-window").html(pw);
 		$(".main-window-mobile").html(pw);
+    $(".invisible-div").css('z-index', '5');
+    $(".invisible-div").css('width','100vw');
+    $(".invisible-div").css('height','100vh');
 	})
 
 	// for the advertising plans book folder, on click, change the html of the popup window
@@ -340,6 +352,9 @@ jQuery (function() {
 		// change the html here
 		$("#popup-window").html(pw);
 		$(".main-window-mobile").html(pw);
+    $(".invisible-div").css('z-index', '5');
+    $(".invisible-div").css('width','100vw');
+    $(".invisible-div").css('height','100vh');
 	})
 
 	//$("#pb-back-button").on("click", function() {
@@ -357,11 +372,11 @@ jQuery (function() {
     			$(".about-me-main").html(amr);
     		})
     		$("#am-contact").on("click", function() {
-    			let amc = '<div class = "about-me-file"><h3 class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);text-decoration: underline">Contact Me</h3><br><a href = "https://www.linkedin.com/in/cydney-vicentina-000236159/" class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);">LinkedIn</a><br><h4 class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);">Phone Me: (510) 931 0938</h4><br><a href = "mailto:cjvicentinacmu@gmail.com" class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);">Email Me: cjvicentinacmu@gmail.com</a></div>';
+    			let amc = '<div class = "about-me-file"><h3 class = "am-header" style = "color: rgba(66, 129, 164, 1);text-decoration: underline;">Contact Me</h3><br><a href = "https://www.linkedin.com/in/cydney-vicentina-000236159/"><h4 class = "am-header">Find Me: <u>On LinkedIn</u></h4></a><br><h4 class = "am-header">Phone Me: (510) 931 0938</h4><br><a href = "mailto:cjvicentinacmu@gmail.com"><h4 class = "am-header">Email Me: <u>cjvicentinacmu@gmail.com</u></h4></a><br><a href = "https://www.instagram.com/cydneyjv/"><h4 class = "am-header">Follow Me: <u>@cydneyjv</u> on Instagram</h4></a></div>';
     			$(".about-me-main").html(amc);
     		})
     		$("#am-fun").on("click", function() {
-    			let amf = '<div class = "about-me-file"><h3 class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);text-decoration: underline">Fun Facts About Me!</h3><br><h4 class = "am-header" style = "background-color: rgba(0,0,0,0); color: rgba(66, 129, 164, 1);">I love sudoku!</h4></iframe></div>';
+    			let amf = '<div class = "about-me-file"><h3 class = "am-header" style = "color: rgba(66, 129, 164, 1);text-decoration: underline">Fun Facts About Me!</h3><br><h4 class = "am-header">I love sudoku and crossword puzzles!</h4><br><h4 class = "am-header">I have recently become obsessed with Valorant (let&#39;s go TSM!).</h4><br><h4 class = "am-header">I recently finished all 5 seasons of Lucifer.</h4><br><h4 class = "am-header">In quarantine, I&#39;ve baking more. My favorites have been green onion pancakes and ciabatta bread!</h4></div>';
     			$(".about-me-main").html(amf);
     		})
     	</script>
@@ -380,6 +395,8 @@ jQuery (function() {
 		$("#am-resume").html(ind);
 		$("#am-contact").html(ind);
 		$("#am-fun").html(ind);
+    $("#popup-window").html(ind);
+    $(".main-window-mobile").html(ind);
 		$(".about-me-main").css('z-index', '-1');
 		$(".invisible-div").css('width','0');
 		$(".invisible-div").css('height','0');

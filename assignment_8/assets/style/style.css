@@ -144,9 +144,7 @@
 /* position the about-me main area, invisible for now */
 .about-me-main {
 	position: fixed;
-	left: 25vw;
-	/* visibility: hidden;
-	display: none; */
+	left: 20vw;
 	width: 800px;
 	height: 80%;
 	justify-self: center;
@@ -178,6 +176,16 @@
 	color: rgba(66, 129, 164, 1);
 	padding: 5px;
 }
+
+/* change the color and padding of h4 labels (about me pages) */
+.am-header, u {
+	padding: 10px;
+	background-color: rgba(0,0,0,0);
+	color: rgba(95, 94, 94, 1);
+	line-height: 2;
+}
+
+a {text-decoration: none; }
 
 /* add background color and alignment for right date/time */
 .time-date {
@@ -584,9 +592,9 @@
 
 	/* position the about-me main area */
 	.about-me-main {
-		left: 15vw;
-	    width: 600px;
-	    height: 85%;
+		left: 9vw;
+	    width: 650px;
+	    height: 81%;
 	    bottom: 15vh;
 	}
 
@@ -649,6 +657,10 @@
 	    width: 315px;
 	    height: 83%;
 	    bottom: 15vh;
+	}
+
+	h4.am-header {
+		font-size: 10px;
 	}
 
 }
@@ -717,6 +729,7 @@
 		font-size: 12px;
 	    width: 150px;
 	    left: 3vw;
+	    bottom: 50px;
 	}
 
 	/* position the about-me main area */
@@ -730,6 +743,24 @@
 	/* change padding */
 	.about-me-file {
 		padding: 10px;
+	}
+
+	h4.am-header {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 5px;
+		font-size: 9px;
+	}
+
+	h3.am-header {
+		font-size: 20px;
+		padding: 5px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	u {
+		text-align: center;
 	}
 
 }
