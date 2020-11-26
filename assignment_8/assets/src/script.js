@@ -30,17 +30,17 @@ jQuery (function() {
       <!-- add on click listeners -->
       <script>
         jQuery (function() {
-          <!-- if the "X" button is clicked, remove the html from the divs -->
+          // if the "X" button is clicked, remove the html from the divs
           $(".exit-button").on("click", function() {
             let noo = '';
             $("#popup-window").html(noo);
             $(".main-window-mobile").html(noo);
           })
-          <!-- if the back button is pressed, go back to all the items -->
+          // if the back button is pressed, go back to all the items
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb0}');
           	$(".back-button").css('visibility','hidden');
-            <!-- re-add the on click listeners -->
+            // re-add the on click listeners
           	  $(".pb-1").on("click", function() {
       			    let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="assets/media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
       			    $(".window-main-row").html(pb1);
@@ -57,19 +57,19 @@ jQuery (function() {
       			    $(".back-button").css('visibility','visible');
       			  })
           })
-          <!-- on click listener for the first item, iframes should open a pdf viewer -->
+          // on click listener for the first item, iframes should open a pdf viewer
           $(".pb-1").on("click", function() {
     		    let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="assets/media/p1-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
     		    $(".window-main-row").html(pb1);
     		    $(".back-button").css('visibility','visible');
     		  })
-          <!-- on click listener for the second item-->
+          // on click listener for the second item
     		  $(".pb-2").on("click", function() {
     		    let pb2 = '<div class = "pdf-file"><iframe class = "frames" src="assets/media/p2-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
     		    $(".window-main-row").html(pb2);
     		    $(".back-button").css('visibility','visible');
     		  })
-          <!-- on click listener for the third item-->
+          // on click listener for the third item
     		  $(".pb-3").on("click", function() {
     		    let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="assets/media/p3-pb.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
     		    $(".window-main-row").html(pb3);
@@ -118,13 +118,13 @@ jQuery (function() {
       </div>
       <script>
         jQuery (function() {
-          <!-- when the "X" button is clicked, remove the html -->
+          // when the "X" button is clicked, remove the html
           $(".exit-button").on("click", function() {
             let noo = '';
             $("#popup-window").html(noo);
             $(".main-window-mobile").html(noo);
           })
-          <!-- when the "<" button is clicked, refresh the html and readd the onclick listeners -->
+          // when the "<" button is clicked, refresh the html and readd the onclick listeners
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb00}');
           	$(".back-button").css('visibility','hidden');
@@ -139,7 +139,7 @@ jQuery (function() {
   	            $(".back-button").css('visibility','visible');
   	          })
           })
-          <!-- regular on click listeners, one for each coding project's pdf iframe viewer -->
+          // regular on click listeners, one for each coding project's pdf iframe viewer
           $(".pb-1").on("click", function() {
             let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="assets/media/play_bs.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb1);
@@ -192,13 +192,13 @@ jQuery (function() {
       </div>
       <script>
         jQuery (function() {
-          <!-- "X" button removes the html -->
+          // "X" button removes the html
           $(".exit-button").on("click", function() {
             let noo = '';
             $("#popup-window").html(noo);
             $(".main-window-mobile").html(noo);
           })
-          <!-- "<" button readds the image/title html and the onclick listeners -->
+          // "<" button readds the image/title html and the onclick listeners
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb000}');
           	$(".back-button").css('visibility','hidden');
@@ -218,7 +218,7 @@ jQuery (function() {
   	            $(".back-button").css('visibility','visible');
   	          })
           })
-          <!-- regular onclick listeners, each one for a unique folder "item" and opens the correct pdf viewer -->
+          // regular onclick listeners, each one for a unique folder "item" and opens the correct pdf viewer
           $(".pb-1").on("click", function() {
             let pb1 = '<div class = "pdf-file"><iframe class = "frames" src="https://www.youtube.com/embed/JPPKCIDQrHA" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb1);
@@ -276,13 +276,13 @@ jQuery (function() {
       </div>
       <script>
         jQuery (function() {
-          <!-- remove html when the exit button is clicked -->
+          // remove html when the exit button is clicked
           $(".exit-button").on("click", function() {
             let noo = '';
             $("#popup-window").html(noo);
             $(".main-window-mobile").html(noo);
           })
-          <!-- to go back, click the button and the html image and title is readded as well as their onclick listeners -->
+          // to go back, click the button and the html image and title is readded as well as their onclick listeners
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb0000}');
           	$(".back-button").css('visibility','hidden');
@@ -297,7 +297,7 @@ jQuery (function() {
   	            $(".back-button").css('visibility','visible');
   	          })
           })
-          <!-- regular on click listeners, one for each research project and the corresponding pdf viewer iframe -->
+          // regular on click listeners, one for each research project and the corresponding pdf viewer iframe
           $(".pb-1").on("click", function() {
             let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "assets/media/twitch.pdf" width= "500" height= "300" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
             $(".window-main-row").html(pb1);
@@ -350,13 +350,13 @@ jQuery (function() {
       </div>
       <script>
         jQuery (function() {
-          <!-- to remove the popup window -->
+          // to remove the popup window
           $(".exit-button").on("click", function() {
             let noo = '';
             $("#popup-window").html(noo);
             $(".main-window-mobile").html(noo);
           })
-          <!-- to go back to the folder items, readd the old html variable and the on click listeners -->
+          // to go back to the folder items, readd the old html variable and the on click listeners
           $(".back-button").on("click", function() {
           	$(".window-main-row").html('${pb00000}');
           	$(".back-button").css('visibility','hidden');
@@ -376,8 +376,8 @@ jQuery (function() {
   	            $(".back-button").css('visibility','visible');
   	          })
           })
-          <!-- regular on click listeners, one for each plans book that opens an iframe with a pdf -->
-          $(".pb-1").on("click", function() {
+          // regular on click listeners, one for each plans book that opens an iframe with a pdf
+           $(".pb-1").on("click", function() {
             let pb1 = '<div class = "pdf-file"><iframe class = "frames" src = "assets/media/2018-at.pdf" width= "500" height= "300" style = "overflow: auto">Coming Soon: December 2020!</iframe></div>';
             $(".window-main-row").html(pb1);
             $(".back-button").css('visibility','visible');
@@ -410,22 +410,22 @@ jQuery (function() {
     // set a variable to add the labels (resume, contact me, and fun facts!) in a popup div
 		let am = `
 		<div id = 'am-resume' class = "about-me-labels" style = "cursor: pointer;">Resume</div>
-    	<div id = 'am-contact' class = "about-me-labels" style = "cursor: pointer;">Contact Me</div>
-    	<div id = 'am-fun' class = "about-me-labels" style = "cursor: pointer;">Fun Facts!</div>
+    <div id = 'am-contact' class = "about-me-labels" style = "cursor: pointer;">Contact Me</div>
+    <div id = 'am-fun' class = "about-me-labels" style = "cursor: pointer;">Fun Facts!</div>
 
       <!-- add on click listeners to open another popup div with the corresponding information -->
     	<script>
-        <!-- show an iframe with a pdf viewer of my resume -->
+        // show an iframe with a pdf viewer of my resume
     		$("#am-resume").on("click", function() {
     			let amr = '<div class = "about-me-file"><iframe class = "frames" src="assets/media/resume.pdf" width= "500" height= "300" style = "overflow: auto"></iframe></div>';
     			$(".about-me-main").html(amr);
     		})
-        <!-- show a list of contact information with links to my linkedin, email, and instagram -->
+        // show a list of contact information with links to my linkedin, email, and instagram
     		$("#am-contact").on("click", function() {
     			let amc = '<div class = "about-me-file"><h3 class = "am-header" style = "color: rgba(66, 129, 164, 1);text-decoration: underline;">Contact Me</h3><br><a href = "https://www.linkedin.com/in/cydney-vicentina-000236159/"><h4 class = "am-header">Find Me: <u>On LinkedIn</u></h4></a><br><h4 class = "am-header">Phone Me: (510) 931 0938</h4><br><a href = "mailto:cjvicentinacmu@gmail.com"><h4 class = "am-header">Email Me: <u>cjvicentinacmu@gmail.com</u></h4></a><br><a href = "https://www.instagram.com/cydneyjv/"><h4 class = "am-header">Follow Me: <u>@cydneyjv</u> on Instagram</h4></a></div>';
     			$(".about-me-main").html(amc);
     		})
-        <!-- show a list of fun facts -->
+        //  show a list of fun facts
     		$("#am-fun").on("click", function() {
     			let amf = '<div class = "about-me-file"><h3 class = "am-header" style = "color: rgba(66, 129, 164, 1);text-decoration: underline">Fun Facts About Me!</h3><br><h4 class = "am-header">I love sudoku and crossword puzzles!</h4><br><h4 class = "am-header">I have recently become obsessed with Valorant (let&#39;s go TSM!).</h4><br><h4 class = "am-header">I recently finished all 5 seasons of Lucifer.</h4><br><h4 class = "am-header">In quarantine, I&#39;ve baking more. My favorites have been green onion pancakes and ciabatta bread!</h4></div>';
     			$(".about-me-main").html(amf);
