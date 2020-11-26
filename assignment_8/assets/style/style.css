@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* added  */
+/* added the pixel font */
 
-/* added background blue color pixel font in a light gray color */
+/* added global background blue color and added the pixel font in a light gray color, don't allow scrolling generally */
 *, body {
 	background-color: rgba(66, 129, 164, 1);
 	font-family: 'Press Start 2P', cursive;
@@ -11,14 +11,14 @@
 	overflow: hidden;
 }
 
-/* make top text centered */
+/* signin page - make top text centered */
 .form-signin-heading {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
 }
 
-/* fix max width of the sign in section and center horizontally*/
+/* signin page - fix max width of the sign in section and center horizontally/vertically, fix padding + margins*/
 .form-signin {
   max-width: 350px;
   padding: 25px;
@@ -31,23 +31,23 @@
   justify-content: center;
 }
 
-/* change font-weight of checkbox text */
+/* signin page - change font-weight of checkbox text */
 .form-signin .checkbox {
   font-weight: 400;
 }
 
-/* add padding to the disclaimer text */
+/* signin page - add padding to the disclaimer text */
 .form-notreal {
 	padding:20px;
 }
 
-/* change button css - color and padding */
+/* signin page - change button css - color and padding */
 .btn-block {
 	background-color: rgba(196, 196, 196, 1);
 	color: rgba(66, 129, 164, 1);
 }
 
-/* make user icon centered and larger */
+/* signin page - make user icon centered and larger */
 .fa-user-circle{
 	font-size:120px;
 	display: grid;
@@ -56,7 +56,7 @@
 	background-color: rgba(0,0,0,0);
 }
 
-/* center the items */
+/* signin page - center the background image (flower or plain blue square) */
 .form-icon{
 	display: grid;
 	align-items:center;
@@ -79,10 +79,11 @@
   to {background-image: url("assets/images/empty.PNG");}
 }
 
-/* add background color, columns, and position for bottom gray bar */
+/* add background color (light gray), columns, and position for bottom gray bar */
 .bottom-footer {
 	background-color: rgba(208, 205, 202, 1);
 	position: fixed;
+	/* fix to the leftmost bottom  */
 	left: 0;
 	bottom: 0;
     width: 100%;
@@ -92,16 +93,18 @@
     grid-template-rows: 1fr;
     grid-template-columns: auto 1fr;
     gap: 20px;
+    /* added a z-index for ordering */
     z-index: 3;
+    /* fix the height so the about me tabs "stick" to the top of the footer  */
     height: 86px;
 }
 
-/* add background color */
+/* add gray background color */
 .bottom-row {
 	background-color: rgba(208, 205, 202, 1);
 }
 
-/* for the invisible div, make it transparent and put it right behind the about-me tabs */
+/* for the invisible div, make it transparent and put it right behind the about-me tabs but in front of the footer */
 .invisible-div{
 	z-index: 4;
 	position: fixed;
@@ -123,7 +126,7 @@
 	padding: 15px;
 }
 
-/* add a background color to the about me button when hovered over */
+/* add a background color to the about me button when hovered over (darker gray) */
 .about-me:hover {
 	background-color: rgba(173, 173, 173, 1);
 }
@@ -131,30 +134,30 @@
 /* position the about-me tabs with the correct z-index, add 3 rows, and bottom padding */
 .about-me-tabs {
 	position: fixed;
-	/* visibility: hidden;
-	display: none; */
 	width: 230px;
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 	bottom: 87px;
 	left: 5vw;
+	/* make sure it's "above" the footer and invisible div  */
 	z-index: 5;
 }
 
-/* position the about-me main area, invisible for now */
+/* position the about-me main area, invisible for now, center everything and fix the size */
 .about-me-main {
 	position: fixed;
 	left: 20vw;
-	width: 800px;
-	height: 80%;
+	width: 60%;
+    height: 82%;
 	justify-self: center;
 	align-content: center;
 	bottom: 15vh;
 	background-color: rgba(0,0,0,0);
+	/* to hide it for now  */
 	z-index: -1;
 }
 
-/* add css for when one of the 3 labels is clicked (change the background and text color, add padding, align things center) */
+/* add css for the window when one of the 3 about me tab labels is clicked (change the background [light gray] and text color [dark gray], add padding, align things center) */
 .about-me-file {
 	background-color: rgba(191, 191, 191, 1);
 	padding: 20px;
@@ -166,7 +169,7 @@
 	justify-self: center;
 }
 
-/* change the color and size of the labels, add a border too */
+/* change the color [light gray background, dark gray text] and size of the labels, add a border too */
 .about-me-labels{
 	width: 100%;
 	height: 100%;
@@ -177,17 +180,19 @@
 	padding: 5px;
 }
 
-/* change the color and padding of h4 labels (about me pages) */
+/* change the color and padding of h4 labels (about me pages content) */
 .am-header, u {
 	padding: 10px;
 	background-color: rgba(0,0,0,0);
 	color: rgba(95, 94, 94, 1);
+	/* increased the space between lines  */
 	line-height: 2;
 }
 
+/* removed the underline from the href links  */
 a {text-decoration: none; }
 
-/* add background color and alignment for right date/time */
+/* add background color (gray) and alignment for right date/time */
 .time-date {
 	background-color: rgba(208, 205, 202, 1);
 	text-align: right;
@@ -205,11 +210,13 @@ a {text-decoration: none; }
 	padding: 30px;
     display: grid;
     align-items: center;
+    /* added 4 rows, 6 columns, all even */
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     width: 100%;
     height: 100vh;
+    /* add items by column rather than by row  */
     grid-auto-flow: column;
     text-align: center;
     justify-items: center;
@@ -222,7 +229,7 @@ a {text-decoration: none; }
 	max-width: 200px;
 }
 
-/* add a background color and padding to the folder images when hovered over */
+/* add a background color (darker blue) and padding to the folder images when hovered over */
 .folder-images:hover {
 	padding: 5px;
 	background-color: rgba(47, 99, 128, 1);
@@ -231,6 +238,7 @@ a {text-decoration: none; }
 
 /* add css to make popup window span multiple grid elements, add rounded corners too */
 #popup-window {
+	/* from the second column and row, take up 3 rows and 4 columns, basically centered on the page */
 	grid-area: 2/ 2/span 3/span 4;
 	width: 100%;
 	height: 100%;
@@ -242,35 +250,37 @@ a {text-decoration: none; }
 .window {
 	width: 100%;
 	height: 100%;
+	/* light gray background and dark gray text  */
 	background-color: rgba(239, 235, 230, 1);
 	color: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	border-style: solid;
   	border-color: rgba(196, 196, 196, 1);
   	display: grid;
+  	/* added 3 rows, the last one is just for the bottom border */
   	grid-template-rows: auto auto 1fr;
 }
 
-/* make the exit and back button the right color */
+/* make the exit and back button the right color (gray text and light gray background) */
 .exit-button, .back-button {
 	background-color: rgba(239, 235, 230, 1);
 	color: rgba(0, 0, 0, 0.5);
 	padding: 5px;
 }
 
-/* hide the back button until needed */
+/* hide the back button until needed, make sure it will be in the correct order / z-index */
 .back-button{
 	visibility: hidden;
 	z-index: 8;
 }
 
-/* change colors for the popup window */
+/* change colors for the popup window (light gray background, dark gray text) */
 .window-row span, .window-row{
 	background-color: rgba(239, 235, 230, 1);
 	color: rgba(0, 0, 0, 0.5);
 }
 
-/* add padding and borders to the "rows" in the popup window */
+/* add padding and horizontal borders to the "rows" in the popup window */
 .window-row {
 	padding: 15px;
 	border-style: solid;
@@ -279,10 +289,10 @@ a {text-decoration: none; }
 
 /* new class for the back button */
 .window-top{
-
+	/* empty but added just to avoid errors, class used in the jquery file */
 }
 
-/* change colors for the popup window, add another border at the bottom */
+/* change colors for the popup window (light gray background, dark gray text), add another border at the bottom */
 .window-main-row{
 	background-color: rgba(239, 235, 230, 1);
 	color: rgba(0, 0, 0, 0.5);
@@ -290,39 +300,42 @@ a {text-decoration: none; }
 	height: 100%;
 	border-bottom: solid rgba(196, 196, 196, 1);
 	display: grid;
+	/* added 2 rows, the top one slightly larger to allow for larger "items" in the folder */
 	grid-template-rows: 3fr 2fr;
+	/* added 3 columns for max 3 "items" to be displayed in a folder */
 	grid-template-columns: repeat(3, 1fr);
 	gap: 10px;
 }
 
-/* add css styling to the text inside the popup window */
+/* add css styling to the text inside the popup window (make transparent, text dark gray, change margins)*/
 .pop-up-text {
 	background-color: rgba(0,0,0,0);
 	color: rgba(0, 0, 0, 0.5);
-	padding: 10px;
+	padding: 5px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-/* change color of the popup row */
+/* change color of the popup rows (transparent, dark gray text) */
 .pb{
 	background-color: rgba(0,0,0,0);
 	color: rgba(0, 0, 0, 0.5);
-	padding: 10px;
-	object-fit: cover;
+	padding: 8px;
 }
 
-/* center and allow scrolling for the pdf viewer */
+/* center the pdf viewer and change size*/
 .pdf-file{
 	justify-content: center;
+	/* allow it to span 2 rows and 3 columns of the popup window (basically the entire middle section*/
 	grid-area: 1/ 1/span 2/span 3;
 	height: 100%;
 	width: 100%;
+	/* fix the order */
 	z-index: 7;
 	background-color: rgba(0,0,0,0);
 }
 
-/* create a class for the iframes to size them */
+/* create a class for the iframes (pdfs) to size them and order them */
 .frames{
 	width: 100%;
 	height: 100%;
@@ -333,18 +346,25 @@ a {text-decoration: none; }
 .pop-up-image {
 	background-color: rgba(0,0,0,0);
 	height: 80%;
-	width: auto;
-	border-style: solid;
-	border-color: rgba(196, 196, 196, 1);
+	width: 100%;
+	/* make sure to keep the images' aspect ratios and not crop them */
+	object-fit: contain;
+	padding-bottom: 5px;
 }
 
-/* change size of folder icons */
+/* add a shadow backing to the images inside the pb div as a "border" */
+img.pop-up-image{
+	filter: drop-shadow(0px 0px 1px rgba(0,0,0,.2))
+            drop-shadow(0px 0px 10px rgba(0,0,0,.2));
+}
+
+/* change size (height) of folder icons */
 .folder-images {
 	height: 75px;
 	width: auto;
 }
 
-/* condense the folder text */
+/* condense the folder text by removing side margins */
 .folder-text {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -375,6 +395,7 @@ a {text-decoration: none; }
 #sprite{
 	width: calc(50px * var(--pixel-size));
 	height: calc(50px * var(--pixel-size));
+	/* don't allow scrolling */
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -392,7 +413,8 @@ a {text-decoration: none; }
 }
 
 /* using the sprite sheet, add classes for each action and direction */
-/* magic-back doesn't need a top value, next 3 are magic actions */
+/* not all are used but the option is here if I decide to add some */
+/* magic-back doesn't need a class since it's the top value, next 3 are magic actions */
 .magic-left {
    top: calc(-54px * var(--pixel-size));
 }
@@ -500,6 +522,7 @@ a {text-decoration: none; }
    from {
       transform: translate3d(0px,0,0)
    }
+   /* move to the left each step, based on the spritesheet */
    to {
       transform: translate3d(-50%,0,0)
    }
@@ -509,6 +532,7 @@ a {text-decoration: none; }
 .main-window-mobile {
 	visibility: hidden;
 	display: none;
+	/* make sure it's below the bottom footer */
 	z-index: 2;
 	position: fixed;
 	top: 0;
@@ -517,7 +541,7 @@ a {text-decoration: none; }
 
 /* add different css for about an ipad's width */
 @media (max-width: 768px) {
-	/* add grid for main body (folders + padding in between) */
+	/* reduce grid for main body (folders + padding in between) */
 	.main-window {
 		padding: 20px;
 	    grid-template-rows: repeat(4, 1fr);
@@ -541,6 +565,13 @@ a {text-decoration: none; }
 		display: grid;
 		height: 100vh;
 		padding-bottom: 8vh;
+		/* make sure it's above the invisible div */
+		z-index: 6;
+	}
+
+	/* make sure the bottom footer is above the main window mobile */
+	.bottom-footer {
+		z-index: 7;
 	}
 
 	/* for the popup window, center text */
@@ -553,16 +584,20 @@ a {text-decoration: none; }
 		grid-template-rows: repeat(3, 1fr);
 		grid-template-columns: 1fr;
 		gap: 10px;
+		/* allow for scrolling of the pdfs */
 		overflow: scroll;
 		justify-content: center;
 	}
 
-	/* for the popup window, make the images smaller and centered */
+	/* for the popup window, make the images centered */
 	.pop-up-image{
-		width: 40%;
-		height: auto;
 		align-self: center;
 		justify-self: center;
+	}
+
+	/* lessen the padding for the text in the middle row */
+	.pop-up-text{
+		padding: 10px;
 	}
 
 	/* for the popup window, center the text */
@@ -570,7 +605,7 @@ a {text-decoration: none; }
 		text-align: center;
 	}
 
-	/* for the popup window, change the span for the pdf viewers */
+	/* for the popup window, change the span for the pdf viewers (basically whole screen), center everything */
 	.pdf-file{
 		grid-area: 1/ 1/span 3/span 1;
 		background-color: rgba(239, 235, 230, 1);
@@ -580,6 +615,7 @@ a {text-decoration: none; }
 		align-self: center;
 	}
 
+	/* make sure the window fits the entire width of the screen */
 	.window{
 		width: 100vw;
 	}
@@ -590,32 +626,34 @@ a {text-decoration: none; }
 		left: 3vw;
 	}
 
-	/* position the about-me main area */
+	/* position and resize the about-me main area (and the font) */
 	.about-me-main {
 		left: 9vw;
-	    width: 650px;
-	    height: 81%;
+	    width: 85%;
 	    bottom: 15vh;
+	    font-size: 13px;
 	}
 
 }
 
 /* add different css for iphone x width */
 @media (max-width: 375px) {
-	/* add font sizes for the sign in page */
+	/* shrink the font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 20px;
 	}
 
+	/* shrink the font sizes for the sign in page */
 	.form-title {
 		font-size: 15px;
 	}
 
+	/* shrink the font sizes for the sign in page */
 	.form-signin-submit {
 		font-size: 12px;
 	}
 
-	/* remove extra padding */
+	/* remove extra padding for the time/date */
 	.time-date {
 		padding-right: 0px;
 	}
@@ -626,7 +664,7 @@ a {text-decoration: none; }
 		display: none;
 	}
 
-	/* show the mobile window view */
+	/* lower the mobile window view */
 	.main-window-mobile {
 		padding-bottom: 10vh;
 	}
@@ -637,15 +675,7 @@ a {text-decoration: none; }
 		text-align: center;
 	}
 
-	/* for the popup window, make the images smaller and centered */
-	.pop-up-image{
-		width: 50%;
-		height: auto;
-		align-self: center;
-		justify-self: center;
-	}
-
-	/* position the about-me tabs */
+	/* position the about-me tabs and shorten the width */
 	.about-me-tabs {
 		width: 200px;
 		left: 3vw;
@@ -659,6 +689,7 @@ a {text-decoration: none; }
 	    bottom: 15vh;
 	}
 
+	/* make the about me content headers smaller text-wise */
 	h4.am-header {
 		font-size: 10px;
 	}
@@ -667,46 +698,53 @@ a {text-decoration: none; }
 
 /* add different css for iphone 5 width */
 @media (max-width: 320px) {
-	/* add font sizes for the sign in page */
+	/* shrink font sizes for the sign in page */
 	.form-signin-heading {
 		font-size: 18px;
 	}
+
 	/* change size of the user circle icon */
 	.fa-user-circle {
 		font-size:100px;
 	}
-	/* add grid for main body (folders + padding in between) */
+
+	/* shrink the padding and gaps for the main window */
 	.main-window {
 		padding: 10px;
 		gap: 10px;
 		padding-bottom: 10vh;
 	}
+
 	/* make the folder icons smaller */
 	.folder-images {
 		height: 50px;
 		width: auto;
 	}
+
 	/* make the about me and the date text smaller */
 	.about-me, .time-date{
 		font-size: 12px;
 	}
+
 	/* lessen the padding for the about me button */
 	#about-me-button {
 		padding: 10px;
 	}
+
 	/* make the bottom gray bar smaller */
 	.bottom-footer {
 		height: 50px;
 		padding: 10px;
 	}
 
-	/* lessen the padding on the folder text */
+	/* lessen the padding and margins on the folder text */
 	.folder-text{
 		margin-block-start: 1.5em;
     	margin-block-end: 1.5em;
     	padding-left: 5px;
         padding-right: 5px;
 	}
+
 	/* show the mobile main window */
 	.main-window-mobile {
 		visibility: visible;
@@ -719,12 +757,7 @@ a {text-decoration: none; }
 	   --pixel-size: 1.5;
 	}
 
-	/* for the popup window, make the images even smaller */
-	.pop-up-image{
-		width: 30%;
-	}
-
-	/* position the about-me tabs */
+	/* position the about-me tabs and shrink the font again */
 	.about-me-tabs {
 		font-size: 12px;
 	    width: 150px;
@@ -740,11 +773,12 @@ a {text-decoration: none; }
 	    bottom: 23vh;
 	}
 
-	/* change padding */
+	/* change padding for the folder items */
 	.about-me-file {
 		padding: 10px;
 	}
 
+	/* for the about me content, shrink the font and reduce the padding / margins */
 	h4.am-header {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -752,6 +786,7 @@ a {text-decoration: none; }
 		font-size: 9px;
 	}
 
+	/* for the about me titles, shrink the text and padding / margins again */
 	h3.am-header {
 		font-size: 20px;
 		padding: 5px;
@@ -759,6 +794,7 @@ a {text-decoration: none; }
 		margin-bottom: 5px;
 	}
 
+	/* center the underlined text */
 	u {
 		text-align: center;
 	}

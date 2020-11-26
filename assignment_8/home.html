@@ -6,13 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home page">
     <meta name="author" content="Cydney Vicentina">
-    <!-- links for the bootstrap css, not used -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-    <!-- links for the bootstrap jQuery + javascript not used -->
+    <!-- link for the jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <!-- adding pdf viewer js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
     <!-- links for my css and javascript-->
     <link rel="stylesheet" href="assets/style/style.css">
     <script src="assets/src/script.js"></script>
@@ -29,17 +24,18 @@
   <div class = "about-me-tabs">
 
   </div>
-  <!-- adding a new div for the about me sections-->
+  <!-- adding a new div for the about me main content section that will pop up when you click on an about me tab-->
   <div class = "about-me-main">
 
   </div>
-  <!-- adding an invisible div behind the about me tabs with an on click event listener to tell the css to hide the about me tabs when the user clicks anywhere outside of the tabs -->
+  <!-- adding an invisible div behind the about me tabs (and behind the popup window) with an on click event listener to tell the css to hide the about me tabs (and popup window) when the user clicks anywhere outside of the tabs -->
   <div class = "invisible-div">
+
   </div>
   <!-- adding bottom gray bar -->
   <div class="bottom-footer">
-    <div class="about-me">
     <!-- on the left side, add a button for an "about me" popup with a shadow -->
+    <div class="about-me">
       <div id = "about-me-button">About Me</div>
     </div>
     <!-- on the right side, add the system date and time -->
@@ -52,7 +48,7 @@
     <!-- small javascript to add date / time -->
         <script type ="text/javascript">
           var td = new Date();
-          // split the date and time into two elements
+          // split the date and time into two elements and add it to the correct span/div
           document.getElementById("t-d").innerHTML = td.toLocaleString().split(", ")[0];
           document.getElementById("time-only").innerHTML = td.toLocaleString().split(", ")[1];
         </script>
@@ -88,6 +84,7 @@
       <img class = "folder-images pixelart" src = "assets/images/f5.PNG" alt = "Advertising Plans Books">
       <h6 class = "folder-text">Advertising Plans Books</h6>
     </div>
+    <!-- adding text for the sprite enclosed in a div -->
     <div class = "sprite-text">
       <h6 class = "sprite-saying">Welcome to Cydney Vicentina's Portfolio!</h6>
       <!-- adding a div for my sprite! -->
@@ -96,6 +93,7 @@
         <img class = "sprite-sheet pixelart wave-front" src = "assets/images/cjv-sprite.png" alt = "sprite image">
       </div>
     </div>
+
   </div>
 </body>
 </html>
