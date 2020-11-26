@@ -147,7 +147,7 @@ jQuery (function() {
 	$("#video-edits").on("click",function vp() {
 		// html for the popup window here
 
-		let pb000 = `<div class = "pb pb-1" style = "object-fit: cover;"><img class = "pop-up-image" src = "assets/images/sh.PNG" alt = "Shanghai Thumbnail"><h5 class = "pop-up-text">Welcome to Shanghai!</h5></div><div class = "pb pb-2"><img class = "pop-up-image" src = "assets/images/hk.png" alt = "Hong Kong Thumbnail"><h5 class = "pop-up-text">Welcome to Hong Kong!</h5></div><div class = "pb pb-3"><img class = "pop-up-image" src = "assets/images/p3p.png" alt = "Pitch Thumbnail"><h5 class = "pop-up-text">CMU Adidas Dashboard Pitch</h5></div>`;
+		let pb000 = `<div class = "pb pb-1" style = "object-fit: cover;"><img class = "pop-up-image" src = "assets/images/sh.PNG" alt = "Shanghai Thumbnail"><h5 class = "pop-up-text">Welcome to Shanghai!</h5></div><div class = "pb pb-2"><img class = "pop-up-image" src = "assets/images/hk.PNG" alt = "Hong Kong Thumbnail"><h5 class = "pop-up-text">Welcome to Hong Kong!</h5></div><div class = "pb pb-3"><img class = "pop-up-image" src = "assets/images/p3p.PNG" alt = "Pitch Thumbnail"><h5 class = "pop-up-text">CMU Adidas Dashboard Pitch</h5></div>`;
 
 		let pw = `
 		<div class = "window">
