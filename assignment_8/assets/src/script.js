@@ -213,7 +213,7 @@ jQuery (function() {
   	            $(".back-button").css('visibility','visible');
   	          })
   	          $(".pb-3").on("click", function() {
-  	            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="https://drive.google.com/file/d/1PA8N4_YSIoPmLnDP-30U7sM3oKFUiZnI/preview" style = "overflow: auto"></iframe></div>';
+  	            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="https://www.youtube.com/embed/UfDXdAmrheA" style = "overflow: auto"></iframe></div>';
   	            $(".window-main-row").html(pb3);
   	            $(".back-button").css('visibility','visible');
   	          })
@@ -230,7 +230,7 @@ jQuery (function() {
             $(".back-button").css('visibility','visible');
           })
           $(".pb-3").on("click", function() {
-            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="https://drive.google.com/file/d/1PA8N4_YSIoPmLnDP-30U7sM3oKFUiZnI/preview" style = "overflow: auto"></iframe></div>';
+            let pb3 = '<div class = "pdf-file"><iframe class = "frames" src="https://www.youtube.com/embed/UfDXdAmrheA" style = "overflow: auto"></iframe></div>';
             $(".window-main-row").html(pb3);
             $(".back-button").css('visibility','visible');
           })
