@@ -1,0 +1,160 @@
+
+/* added global background blue color and added the pixel font in a light gray color, don't allow scrolling generally */
+*, body {
+	background-color: rgba(66, 129, 164, 1);
+	color: rgba(229, 229, 229, 1);
+}
+
+/* make a css variable (to enlarge the sprite) */
+:root {
+   --pixel-size: 3;
+}
+
+/* change the positioning of the sprite's text */
+.sprite-text {
+	align-self: center;
+	justify-content: center;
+	text-align: center
+}
+
+/* remove padding and align to the bottom */
+.sprite-saying{
+	color: rgba(173, 173, 173, 1);
+}
+
+/* crop the sprite div */
+.sprite{
+	width: calc(50px * var(--pixel-size));
+	height: calc(50px * var(--pixel-size));
+	/* don't allow scrolling */
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* add animation and change the positioning */
+.sprite-sheet {
+	animation: moveSpritesheet 2s steps(6) infinite;
+	width: calc(650px * var(--pixel-size));
+	position: relative;
+}
+
+/* tell css not to blur the image */
+.pixelart {
+   image-rendering: pixelated;
+}
+
+/* using the sprite sheet, add classes for each action and direction */
+/* not all are used but the option is here if I decide to add some */
+/* magic-back doesn't need a class since it's the top value, next 3 are magic actions */
+.magic-left {
+   top: calc(-54px * var(--pixel-size));
+}
+
+.magic-front {
+   top: calc(-108px * var(--pixel-size));
+}
+
+.magic-right {
+   top: calc(-162px * var(--pixel-size));
+}
+
+/* next 4 are weapon thrust actions */
+.thrust-back {
+   top: calc(-217px * var(--pixel-size));
+}
+
+.thrust-left {
+   top: calc(-271px * var(--pixel-size));
+}
+
+.thrust-front {
+   top: calc(-325px * var(--pixel-size));
+}
+
+.thrust-right {
+   top: calc(-379px * var(--pixel-size));
+}
+
+/* next 4 are walking actions */
+.walk-back {
+   top: calc(-434px * var(--pixel-size));
+}
+
+.walk-left {
+   top: calc(-488px * var(--pixel-size));
+}
+
+.walk-front {
+   top: calc(-542px * var(--pixel-size));
+}
+
+.walk-right {
+   top: calc(-596px * var(--pixel-size));
+}
+
+/* next 4 are slash actions */
+.slash-back {
+   top: calc(-651px * var(--pixel-size));
+}
+
+.slash-left {
+   top: calc(-705px * var(--pixel-size));
+}
+
+.slash-front {
+   top: calc(-759px * var(--pixel-size));
+}
+
+.slash-right {
+   top: calc(-813px * var(--pixel-size));
+}
+
+/* next 4 are shoot actions */
+.shoot-back {
+   top: calc(-869px * var(--pixel-size));
+}
+
+.shoot-left {
+   top: calc(-923px * var(--pixel-size));
+}
+
+.shoot-front {
+   top: calc(-977px * var(--pixel-size));
+}
+
+.shoot-right {
+   top: calc(-1031px * var(--pixel-size));
+}
+
+/* next 1 is a falling action */
+.fall-front {
+   top: calc(-1087px * var(--pixel-size));
+}
+
+/* next 4 are waving actions */
+.wave-back {
+   top: calc(-1141px * var(--pixel-size));
+}
+
+.wave-left {
+   top: calc(-1195px * var(--pixel-size));
+}
+
+.wave-front {
+   top: calc(-1249px * var(--pixel-size));
+}
+
+.wave-right {
+   top: calc(-1303px * var(--pixel-size));
+}
+
+/* add animation by moving the crop of the image */
+@keyframes moveSpritesheet {
+   from {
+      transform: translate3d(0px,0,0)
+   }
+   /* move to the left each step, based on the spritesheet */
+   to {
+      transform: translate3d(-50%,0,0)
+   }
+}
